@@ -1,3 +1,12 @@
 data/
 unzipped_data/
 filtered_data.zip
+0.26.0
+mid_target/
+patent_data/
+processed_chunks_test/
+processed_chunks_val/
+processed_chunks_train/
+__pycache__/
+converted_data/
+bart-finetuned/
