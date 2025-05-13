@@ -22,11 +22,11 @@ MODEL_CHOICES = {
     "custom": "patrickvonplaten/bart-tiny-random"
 }
 
-MODEL_NAME = MODEL_CHOICES["tiny"]
+MODEL_NAME = MODEL_CHOICES["base"]
 
-CHUNKS_DIR = "/content/drive/MyDrive/data"
-OUTPUT_DIR = "/content/drive/MyDrive/bart-finetuned"
-BATCH_SIZE = 4
+CHUNKS_DIR = "/home/debian/develop/denis/Neuro-research/BART/data"
+OUTPUT_DIR = "/home/debian/develop/denis/Neuro-research/BART/bart-finetuned"
+BATCH_SIZE = 8
 MAX_INPUT_LENGTH = 1024
 MAX_TARGET_LENGTH = 256
 SEED = 42
@@ -84,7 +84,6 @@ bleu = load("bleu")
 def compute_metrics(eval_pred):
     predictions, labels = eval_pred
 
-    # Декодирование
     decoded_preds = tokenizer.batch_decode(predictions, skip_special_tokens=True)
     decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
@@ -119,8 +118,8 @@ data_collator = DataCollatorForSeq2Seq(
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
     eval_strategy='no',
-    eval_steps=100,
-    save_steps=500,          
+    eval_steps=1100,
+    save_steps=1000,          
     save_total_limit=2,              
     logging_steps=100,
     per_device_train_batch_size=BATCH_SIZE,

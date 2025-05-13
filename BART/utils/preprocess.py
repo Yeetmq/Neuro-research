@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     arxiv = get_dataset_from_hf('arxiv', 'scientific_papers', 
                                 split='train',
-                                cache_dir=r"C:\Users\denis\.cache\huggingface\datasets")
+                                cache_dir=None)
     
     patent_dataset = get_dataset_from_json(
         path_to_data=r'D:\ethd\ml\Neuro-research\BART\data',
@@ -131,7 +131,8 @@ if __name__ == '__main__':
     print(f"Train: {len(train_ds)} samples")
     print(f"Val: {len(val_ds)} samples")
     print(f"Test: {len(test_ds)} samples")
+    print(test_ds)
 
-    tokenize_in_chunks(train_ds, save_dir='processed_chunks_train', chunk_size=2000, tokenizer=tokenizer)
-    tokenize_in_chunks(val_ds, save_dir='processed_chunks_val', chunk_size=2000, tokenizer=tokenizer)
-    tokenize_in_chunks(test_ds, save_dir='processed_chunks_test', chunk_size=2000, tokenizer=tokenizer)
+    # tokenize_in_chunks(train_ds, save_dir='processed_chunks_train', chunk_size=2000, tokenizer=tokenizer)
+    # tokenize_in_chunks(val_ds, save_dir='processed_chunks_val', chunk_size=2000, tokenizer=tokenizer)
+    # tokenize_in_chunks(test_ds, save_dir='processed_chunks_test', chunk_size=2000, tokenizer=tokenizer)
