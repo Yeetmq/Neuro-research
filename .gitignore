@@ -1,3 +1,4 @@
+# Исключения из ветки model
 data/
 unzipped_data/
 filtered_data.zip
@@ -10,3 +11,8 @@ processed_chunks_train/
 __pycache__/
 converted_data/
 bart-finetuned/
+
+# Исключения из ветки main
+BART/
+data_no/
+article_parsing/
