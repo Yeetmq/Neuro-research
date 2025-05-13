@@ -14,8 +14,8 @@ def main():
     parser.add_argument('--translate', default='false', help='Need translation?')
 
     sample_agrs_list = [
-        # '--query', r'Transformers in machine learning',
-        '--query', r'Трансформеры в машинном обучении',
+        '--query', r'Transformers in machine learning',
+        # '--query', r'Трансформеры в машинном обучении',
         '--config', r'D:\ethd\ml\Neuro-research\summarization_parser\config\settings.yaml',
         '--translate', 'false'
     ]

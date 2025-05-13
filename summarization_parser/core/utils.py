@@ -14,6 +14,10 @@ def save_to_file(data: List[str], path: str) -> None:
         for item in data:
             f.write(item + "\n\n")
 
+def save_wiki_to_file(data: List[str], path: str) -> None:
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(data + "\n\n")
+
 def load_config(path: str) -> Dict:
     """Загрузка конфигурации из YAML"""
     with open(path, 'r') as f:

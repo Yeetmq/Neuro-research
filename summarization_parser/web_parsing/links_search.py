@@ -8,6 +8,20 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import time
+from googlesearch import search
+
+
+def get_google_results(query, num_results=10):
+
+    results = list(
+        search(
+            query, 
+            num_results=num_results,
+            lang="en",
+            advanced=False
+            ))
+    return results
+
 
 def get_yandex_results(query):
     chrome_options = Options()

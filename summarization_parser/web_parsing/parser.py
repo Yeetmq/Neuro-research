@@ -6,6 +6,10 @@ from requests.exceptions import SSLError
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import wikipedia
 from core.utils import logger
+from threading import Thread
+import trafilatura
+from typing import List
+
 
 
 def wiki_search(query: str):
@@ -31,6 +35,7 @@ def load_sites(filename="..\data\sites.txt"):
 def classify_links(path):
     video_links = []
     webpage_links = []
+    wiki_links = []
 
     links = []
 
@@ -43,7 +48,9 @@ def classify_links(path):
     for link in links:
         
         if re.search(r"(youtube\.com|rutube\.ru|vimeo\.com)", link, re.IGNORECASE):
-            video_links.append(link)  
+            video_links.append(link)
+        elif re.search(r"(wiki|wikipedia)", link, re.IGNORECASE):
+            wiki_links.append(link)
         else:
             webpage_links.append(link)  
     return video_links, webpage_links
@@ -94,6 +101,41 @@ def is_relevant_page(url):
         return not any(keyword in text for keyword in ["курс", "платный", "course"])
     except:
         return False
+
+
+def get_page_content(link, result_path: str,  timeout=5):
+    '''
+    trafilatura parsing
+    '''
+
+    result = None
+    def task():
+        nonlocal result
+        try:
+            html = trafilatura.fetch_url(link)
+            result = trafilatura.extract(html)
+        except Exception:
+            pass
+            
+    thread = Thread(target=task)
+    thread.start()
+    thread.join(timeout)
+
+    if result:
+        with open(result_path, "a", encoding="utf-8") as file:
+            
+            file.write(clean_text(result))
+            
+            file.write("\n\n" + "="*50 + "\n\n")
+        
+        print(f"Содержимое страницы {link} записано в файл.")
+
+    return result
+
+def parse_all_links(sites: List[str], result_path: str):
+    for link in sites:
+        get_page_content(link, result_path)
+
 
 def parse_webpage(session, url, result_path):
     try:

@@ -2,7 +2,7 @@ from core.web_parsing import WebHandler
 from core.pdf_handler import PDFHandler
 from core.arxiv_api import ArxivAPI
 from core.translation import TranslationClient
-from core.utils import save_to_file, logger
+from core.utils import save_to_file, logger, save_wiki_to_file
 
 
 class SummarizationParser:
@@ -11,7 +11,8 @@ class SummarizationParser:
         self.web_handler = WebHandler()
         self.pdf_handler = PDFHandler()
         self.arxiv_api = ArxivAPI()
-        self.translate = config.get('translate', False)
+        # self.translate = config.get('translate', False)
+        self.translate = None
         self.translation_client = TranslationClient() if self.translate else None
         
     def run(self):
@@ -38,18 +39,19 @@ class SummarizationParser:
         save_to_file(site_links, self.config['links_path'])
         
         video_links, webpage_links = self.web_handler.classify_links(self.config['links_path'])
-        self.web_handler.parse_pages(links=webpage_links, result_path=self.config['result_path'])
+        self.web_handler.parse_all_links(links=webpage_links, result_path=self.config['result_path'])
         
         if self.translate and self.translation_client:
             self.translation_client.translate_file_in_parts(self.config['result_path'])
 
-        arxiv_texts = self._process_arxiv_articles()
+        # arxiv_texts = ''
+        # arxiv_texts = self._process_arxiv_articles()
         wiki = self.web_handler.wiki_search(self.config['query'])
 
-        if wiki is not None:
-            arxiv_texts += wiki
+        # if wiki is not None:
+        #     arxiv_texts += wiki
         
-        save_to_file(arxiv_texts, self.config['result_path'])
+        save_wiki_to_file(wiki, self.config['result_path'])
 
         
         
@@ -92,3 +94,15 @@ class SummarizationParser:
                 
         except Exception as e:
             logger.exception(f"Error translating file {file_path}: {e}")
+
+
+if __name__ == '__main__':
+
+    from summarization_parser.core.web_parsing import WebHandler
+
+    web_handler = WebHandler()
+    wiki = web_handler.wiki_search('Transformers in machine learning')
+    print('--------')
+    print(type(wiki))
+    print('--------')
+    print(wiki)
