@@ -13,6 +13,6 @@ converted_data/
 bart-finetuned/
 
 # Исключения из ветки main
-BART/
+# BART/
 data_no/
 article_parsing/

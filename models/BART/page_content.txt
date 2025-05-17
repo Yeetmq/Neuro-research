@@ -1,0 +1,2221 @@
+Transformer (engine learning model) Materials from the Wikipedia Free Encyclopaedia The current version of the page has not been tested by test participants and may differ significantly from the version tested on 5 March 2025; the tests require correction. 2 is required. To move to navigation to search for this term, there are other values, see Transformer. Transformer. Transformers, unlike RNA, do not need to process sequences in order. For example, if input data from Google Brain[1] do not need to process the end of the text after processing the text. As a result, transformers are designed to process sequences such as text in natural language and perform tasks such as machine translation of automatic refraction. In contrast to RNA, transformers do not need to process sequences in order. For example, if input data from Google Brain[1], the transformer does not need to process the end of the text after processing the text.
+The network architecture2 Pay attention to the input sequence of position information.4 The coder receives a part of this sequence and the output of the coder. The coder and the decorator are made up of layers. The coder &apos; s layers consistently transmit the result to the next layer as its entrance. The decoder &apos; s layers consistently transmit the result together with the result of the encoder &apos; s input. Each coder is composed of a self-awareness mechanism (incoming from the previous layer) and a neural network with a direct connection (incoming from the self-awareness mechanism). Each decoder consists of a self-awareness mechanism (incoming from the previous layer), a mechanism to focus on the results of the coding (incoming from the self-awareness mechanism and encoder) of the neural network with a direct connection (incoming from the self-awareness mechanism).
+==Designation=====Recognition================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+The GPT version of version 3.5, modified using the GPT model to follow the command model (InstructGPT model), was designed to create a special generic II chatbot (General AI chatbot).ChatGPT. Notes [to correct code] 12Vaswani A., Shazeer N., Parmar N.,USzkoreit B., Jones L., Gomez A. N., Kaiser . .,Polosukhin I.Attenation is All you Need,R. Advances in National Information Processing Systems 30I. Guyon,U. v. Luxburg, S. Bengio,H. Date of WPus, S.V.N. Vishwanathan, R. Garnett 2017. P. Guyon, U. v. Luxburg, S. Bengauhan, H. Date of 2009, S.V.V.V.V.V.V.V.V.V.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.: 15.L.L.S.S.S.S.S.S.S.R.S.S.R.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.R.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S
+) Date of address: 3 November 2020. Archived 2 November 2020. The Policy Conceptor Auto-Treatrical Training [Acr.] Transformative Auto-Trust [Acr.] Transformative Transformative Transformer[t.] Transformative Transformer[t.
+Tgate ProjectSynthesia [.] xAIZhipu AIYANDEX Category Artificial Identifier https:ru.wikipedia.orgw index.php?titformer_(model_hard_learning)aldidrid44669088 Category: Artificial neural networks: Vikitorite: External references empty ============================================================Plip of pageMetric CoderHeBrilogAI-SLLMsMoreut-Taxirot-Taxirot-Taxirorutorut-Tariuterut-Sal-Sal-Shal-Sutty-Sty-Stoporo-Storo-Storo-Storo-Storo-Storo-Storo-Sty-Sto-Storo-Storo-Storo-Storo-Storo-s-s-s-Sto-Sto-Sto-Sto-Sto-Strato-Strato-Sto-Sto-Sto-Sto-Sto-Strato-Strato-Strato-Strato-Strato-Strato-Shoo-Strato-Shooo-Shoo-Shoo-Shoooo-Shoo-Shoo-Shoo-Shoo-Shoo-Shooo-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Tah-Tah-Tah-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Sal-Tah-Sal-Sal-S
+to be done by the Programmer-setting TutorsAug 17, 2032 min overTransformers in Machine Learning StandardsAug, 2032 min overTransformers in Machine LearningTransformers are a type of equipment used in mechanical translation, part in national language processing (NLP)
+The role of experts in the field of human rights in the field of human rights in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights and fundamental freedoms in the field of human rights.
+:Unlike RNNs that process is sequentially, transformers can process all in mind positions in parallel, making them more effective.Long-Range Dependences: The self-attenistics are the modus operandi of the type to build patterns between technical standards, which is chalking for transferable articles.Scalability:Transformers can be easly applied to:
+(Text-to-Text Transfer Transfer Transiter): T5 in the most recent NLP taxes as a text-to-to-text test as well as as as a text-to-text gap as contained in the single-sing varyus tasks under a single article in this framework.Tags:machine-learningpythondeep-learndeep-learningtransformersmachine-learmachine-learning-to-tutorials Capacity-Related PostsSee AllHow to Handle Tables Dering Chunging?
+But the most important advantage of the Transformers is their high performance in parallelization. Even Google Cloud recommends that the Transformer be used as a model when working on Cloud TPU. Try to figure out what the model is made up of and what the functions are. The Transformer's first model was proposed in the article Actence is All You Need. Implementation on TensorFlow is available as part of the Tensor2Tensor package, and in addition, the NLP researchers from Harvard have created an article on PyTorch. In the same manual, we will try to set out, as easily and consistently as possible, the main ideas and concepts that we hope will help people who do not have a deep knowledge of the subject area to understand the model. High-level view looks at the model as a black box.
+When we look at this Optimus Prime a little closer, we'll see that inside it is a coder component, decoded component, and the connections between them. Coding component is a stack of encoders; in the illustration below, we've shown 6 encoders above each other (there's nothing magical, you can experiment with any other number). Decoded component is a decoder in the same quantity. All encoders are identical in structure, though they have different weights. Each can be divided into two sub-layers: The input sequence that enters the encoder first passes through the internal focus layer (self-attention), helping the encoder to look at other words in the input sentence at the time the specific word is encoded. We'll look at this mechanism later in the article.
+The same network is applied independently for each word in the sentence. The decoder also contains two of these layers, but between them there is a layer of attention that helps the decoder focus on the relevant parts of the input proposal (this is similar to the way the attention mechanism is organized in seq2seq). On the stage, the Tenzors come out now, when we see the main components of the model, look at the different vectors, and how they are transmitted from the component to the component, transforming the input sequence of the trained model into the output. As in the case of any NLP application, we start with converting the word into a vector using the word algorithm of words (world embeddings). Every word is converted into a vector of dimension 512. We will represent these vectors with simple squares. The Embeddings are applied only in the lowest encoder itself. On the level of the algorithms, the size of the word(s). Each word is converted into a vector of dimension 512. We will represent these vectors with simple squares.
+(For the lowest encoder, this will be the embedding of words, for the other weekend vector of lower encoders). The size of this set of vectors is a hyperparameter that we can set, and is essentially equal to the length of the longest sentence in the learning body. After the words of the incoming sentence have been converted into embedding, each of them goes through two layers of encoder separately. Here is one of the main features of the Transformer: each word follows its own trajectory in the encoder. And although there is a relationship between these trajectorys in the inner layer, there is no direct distribution of these relationships in the layer, which allows different trajectoryes to run parallel through this layer. Further, we will look at what happens in each substrate of the encoder on the example of a shorter sentence. First coded! As we have already mentioned, the encoder gets to the entrance and process the set of vectors through the inner layer of attention.
+And then each of them goes through the neural network of direct distribution, until it finally transmits its exit to the next encoder. The words in each of the entries go through a layer of internal attention. Then each of them goes into a separate but completely identical neural network of direct distribution. If the next sentence is a sentence that we want to translate, then think that the concept of internal attention is used here as something that everyone needs to know. The author of the article himself was not familiar with this term until he read Attention is All You Need. Let's explain how it works. If the next sentence is a sentence that we want to translate: The animal didnt cruss the street becuse it to know what it is in this sentence? Street (street) or animal (animal)?
+How does the model process each word (each entry position), internal attention allows the model to look at the other entry positions of the sequence and find a clue to help better encode the word. If you are familiar with the recurring neural networks (RNN), remember how keeping the hidden state in the RNN allows the representation of the previous dictionarys that have already been processed to be included in the current processed word. The internal focus mechanism is the method that the Transformer uses to model the understanding of other relevant words in processing a particular word. At the time of encoder 5 encoder coding, part of the mechanism focuses on The animal and uses a fragment of its presentation to encode it. The mandatory viewer on Tensor2Tensor, in which you can download and study the Transformer model using this interactive visualization.
+The first step in calculating internal attention is to create three vectors from each input vector (in our case, embedding each word): a vector of request (Query vector), a vector of key (Key vetor) and a vector of value (Value vetor). These vectors are created by multiplying the embedding by the three matrices that we have learned during the learning process. Note that these new vectors are smaller than the embedment vectors. Their dimensions are 64, while the embeddings and the input vectors of the encoder have a dimension of 512. They are not required to be smaller, but in our case the choice of this model architecture is based on the desire to compute in a layer of multiple attention (multi-head output) more stable. Their dimension is 64, while the embedders and the input vectors of the encoder have a dimension of 512. They are not required to be smaller, but in our case, the choice of this model architecture is based on the desire to compute in a layer of multiple (multi-health vectors of embeds) than the embed vectors. They are larger than the embeds and the en vector vector vector vector vector vector vector vector vector vector vector vectors.
+e We create projection requests, keys and values for each word in the input sentence. What are the vectors of the request, key and value? These abstractions that are very useful for understanding and calculating attention. After reading below how attention is calculated, you will know almost everything you need about the role of these vectors in the model under consideration. The second step in calculating internal attention is to get a coefficient (score). Suppose we calculate internal attention for the first word in our example Thinking. We need to evaluate each word in the incoming sentence relative to this word. The coefficient determines how much to focus on other parts of the input sentence at the time the word is encoded in a particular entry. The index is calculated by means of a scalar output of the request vector and the key vector of the corresponding word. Thus, if we calculate the internal attention for the word in item 1, the first factor will be scalarized.
+The third and fourth steps divide these factors by 8 (the quadruple root of the key vector dimensions used in article 64; this value provides a more stable gradient and is used by default, but other values are also possible) and then pass the result through the softmax function (softmax). This function normalizes the coefficients so that they are positive and give a sum of 1. The received softmax ratio (sofmax score) determines the extent to which each of the sentence words will be expressed in a given position. It is clear that the word in its position will have the greatest softmax ratio, but it is sometimes useful to take into account another word relevant to the given. The next step multiplys each value vector by softmax ratio (before adding them).
+This will be the output of the layer of internal attention in this entry (for the first word). This concludes the calculation of the internal attention. This results in a vector that can be transferred further to the neural network of direct distribution. In these applications, however, these calculations are made in a matrix form for faster processing. So when we look at the algorithm of the calculation at the level of words, let's go to the matrix calculation. The matrix calculation of the internal attention. The first step is to compute the matrix of request, key and value. This is done by forming from the embeddings of the matrix X and multiplying it into the balance matrices that we have learned (WQ, WK, WV). Each row in matrix X corresponds to the word in the in-off sentence. We see again the difference in the dimensions of the ambedding vectors (512, or 4 squares in the figure) and the vectors of qkv (64, or 3 squares).
+With matrices, we can squeeze steps 2-6 into a single formula to compute the output of the internal attention layer. Computation of internal attention in matrix form. The article's multiheaded hydraDale internal attention is improved by adding a mechanism called multiple attention. This technique improves the productivity of the internal attention layer by means of the following aspects: The ability of the model to focus on different positions is increased. Yes, in the example above, z1 contains a little bit of all other coding, but it cannot dominate the word itself. In the case of a translation of a sentence like The animal didnt cross the street bacuse is too tired, we want to know which word it refers to. The layer of attention is provided with many subspaces of submission (representation subspaces).
+So we have eight sets for each encoderadecoder. Each of these sets is created randomly. Next, after learning, each set is used to display incoming embeddings (or subcoder vectors) in different subspaces. In case of multiple attention, we have separate WQWKWV balance matrices for each head, which results in different QKV matrices. As we have done earlier, we multiply X by input matrices to produce QKV matrices. By doing the same internal calculations as we described above, eight times with different weighting matrices, as a result of which we get 8 different Z matrices. This gives us a certain challenge. This layer of direct distribution does not expect it to receive only one matrix (a vector for each word) into which we need to squeeze the Z matrix. How do we do that? Conceten and then multiply it by the extra weight of the WO matrix. For the most part, this is all that needs to know about the multiplier.
+Yes, we've got quite a lot of matrices. Let's try to draw them in one image so that we can see everything in one place. Now, when we touch our heads of attention, let's remember our example to look at what different heads are focusing on during the coding of it in our sentence: As we encode it, one head focuses more on the animal, while the other one on tired. You can say that the model's representation of it is based on some representation of the words animal and tired. We can show all heads of attention on one image, but it will be more difficult to interpret. The presentation of order in sequence using position coding. We've missed one important thing in our model how to take the order of words into account in the input sentence. To solve this problem, the Transformer adds a vector to each incoming embedding. These vectors have a certain pattern that the model remembers and co-examples.
+So the intuition here is that adding these values to the embeddings creates meaningful distances between the embedding vectors in the process of projecting them into QKV vectors and the scalar work when calculating attention. So that the model understands the order of the words, we add the position coding vectors, the values of which follow a certain pattern. If we believe that the embedding has a dimension of 4, then the actual position coding will look like: How can this pattern look? At the next representation, each line corresponds to the vector of the position coding: so the first line will be the vector that we add to the embedding of the first word in the input sequence, the second line to the embedding of the second word, etc.
+It is evident that there is a gap in the middle: the values on the left are generated by one function (sine-using) and on the right by the other (cosine-using). They were concadulated to form each of the positional coding vectors. The frame for position coding is described in the article (section 3.5). You can look at the code for the generation of positional codes in get_thiming_signal_1d(). This is not the only possible method for positioning coding, but it allows to scale on a sequence of uncertain lengths (e.g. if our trained model is to translate a sentence that is longer than all those found in the instructional sample). The last detail in the encoder architecture that we need to mention before moving forward is that each substrate (internal attention, complete) in each encoder has a residual connection around it, which follows a residual link.
+The visualization of vectors and the operation of the normalization of the inner layer is as follows: The situation is similar to that of decoder subcoders. In considering the Transformer as two stacks of encoders and decoders, we will present it as follows: What is now the decoder part of the decoder part, we actually already know how the decoder components work. But let's see how the encoder and decoder components work together. The encoder begins to process the input proposal. The top encoder output is then transformed into a set of vectors of attention K and V. They are used by all decoders in their encoder layer of attention, which helps them to focus on the appropriate locations in the incoming sentence: Once the encoder and decoder phase is completed, the decode phase begins. Each phase of the decode phase returns the output element (in this case, the translation sentence in English).
+e steps are repeated until a special symbol indicates that the Transformer decoder has completed the generation of the output sequence. The exit of each step is sent to the lower decoder in the next time interval, and the decoders generate their result in the same way as the encoders do. And just as we have done with the Encoder entrances, we add position coding to those decoder entrances that indicate the position of each word. The layers of internal attention in the decoder work slightly differently from the layers in the encoder. In the decoder, the internal attention layer can focus only on the previous positions in the output sentence. This is done by masking all the entries after the current (inf) before the softmax stage in calculating the internal attention. The encoder layer works as multiple attention, except that it creates a request matrix from the layer below and takes the keys and values matrix from the exit of the encoders.
+This is the linear layer and the next layer of softmax. The Lina layer is a simple fully connected neural network that translates the vector created by the decoder grid into a much larger vector called the logic vector (logits vector). Let our model know 10,000 unique English words (the output dictionary of our model) that it has learned from the learning body. This means that our logic will have 10,000 cells in each cell width corresponding to the coefficient of one unique word. So we interpret the output of our model using the linear layer.
+Yes vector, which is then transformed into an output word. The learning outcome. Now, when we've covered the entire process going on in the Transformer, it will be useful to look at the main points that are going on during model learning. At the time of learning, the still untrained model will go through the exact same algorithm we described earlier. But because we're training it on a marked learning frame, we can compare the output to the available reference frame. For visualization, let's assume that our dictionary consists of only six words (a, am, i, tanks, student and (end of sentence). Our model output dictionary is created at the pre-process stage even before the start of the training. As only we have identified our dictionary, we can use a vector of the same size to represent each word in the dictionary (the method known as one-hot code). For example, we can present the word am using the following vector:
+So this is what we're going to do in the learning phase to create a trained and hopefully accurate model. The loss function suggests that we train our model and this is our first stage in the learning phase. The learning is going to do a simple example of translating merci into thanks. In fact, this means that we want to get an exit that is a probability distribution that indicates the word thanks. But because the model is not yet trained, it is unlikely that it will work. Because the model parameters (weight) are initialized randomly, the unexplored model generates the probability distribution with arbitrary values for each celloline. We can compare it with the actual output, then change all the weights, using a method of redistribution error to bring it closer to the desired one. How can we compare the two probability distributions? We just subtract one of the other. For a more detailed introduction, see the cross-border entropy range of Kulbak-Laybler.
+In real tasks, in most cases, we will use sentences longer than one word. For example, apply je suis étudiant to the entrance and expect output I am a student. This means that we want our model to produce a more successful probability distribution, but that: each probability distribution is a vector equal to the size of the output dictionary (6 in our toy example, in fact about 3,000 or 10,000); the first probability distribution is the most likely in a cell corresponding to the word i; the second probability distribution is the most likely in a cell corresponding to the word am; etc. until the fifth probability distribution shows the end of the sentence symbol, which also has its own output dictionary. After learning the model for a sufficient time and on a large body, we can hope to obtain such probability distributions:
+This is certainly not a real indicator if this phrase was part of a learning sample (see: cross-check). Note that each item has a small probability, whether it comes out of this temporary step or not, it is a very useful property of the softmax function that helps the learning process. Now, assuming that the model produces one output element at a time, we can assume that the model chooses the most likely word from the probability distribution and resets everything else. This is one of the ways known as the greedy decoded (greedy decoding). Another way to get, for example, the first two generated words (in our case, I and (a) and beyond, at the next step, start the model twice: for the first time, assuming that the first exit position was I, and the second time, believing that the first word was a.
+This method is called ray search (beam search). In our example, the beam size (beam_size) was equal to two (i.e. we compared the results after calculating the rays on 1 and 2) and the top beams (top_beams) were also two (as we left two words). With these two hyperparameters, you can experiment in model learning. I think the article was useful and would be a starting point in the study of Transformer. If you want to study the topic in more depth, you suggest the following steps: read the article Actence is All You Need, posts on Transformer (Transformer: A Novel Neural Network Architecture for Language Understunning).
+♪ It's overnight. ♪ This publication is about to get out of it. lt's overnight.GENMO: A GENeralist Model for Human MOtion
+
+
+Figure 1. GENMO unifies human motion estimation and generation in a single framework and supports diverse conditioning signals in-
+cluding monocular videos, 2D keypoints, text descriptions, music, and 3D keyframes. GENMO can estimate accurate global human motion
+from videos with dynamic cameras and seamlessly handles arbitrary combinations and lengths of conditioning signals while generating
+smooth transitions between them. All of this is achieved in a single feedforward diffusion pass without complex post-processing.
+
+Abstract
+
+Human motion modeling traditionally separates motion
+generation and estimation into distinct tasks with special-
+ized models. Motion generation models focus on creat-
+ing diverse, realistic motions from inputs like text, audio,
+or keyframes, while motion estimation models aim to re-
+construct accurate motion trajectories from observations
+like videos. Despite sharing underlying representations of
+temporal dynamics and kinematics, this separation limits
+knowledge transfer between tasks and requires maintaining
+separate models. We present GENMO, a unified General-
+ist Model for Human Motion that bridges motion estima-
+tion and generation in a single framework. Our key insight
+is to reformulate motion estimation as constrained motion
+generation, where the output motion must precisely satisfy
+observed conditioning signals. Leveraging the synergy be-
+tween regression and diffusion, GENMO achieves accurate
+global motion estimation while enabling diverse motion
+generation. We also introduce an estimation-guided train-
+
+ing objective that exploits in-the-wild videos with 2D anno-
+tations and text descriptions to enhance generative diver-
+sity. Furthermore, our novel architecture handles variable-
+length motions and mixed multimodal conditions (text, au-
+dio, video) at different time intervals, offering flexible con-
+trol. This unified approach creates synergistic benefits:
+generative priors improve estimated motions under chal-
+lenging conditions like occlusions, while diverse video data
+enhances generation capabilities. Extensive experiments
+demonstrate GENMO’s effectiveness as a generalist frame-
+work that successfully handles multiple human motion tasks
+within a single model.
+
+1. Introduction
+
+Human motion modeling is a longstanding topic in com-
+puter vision and graphics, with applications in gaming,
+animation, and 3D content creation. These creative ap-
+plications typically require precise and intuitive user con-
+
+1
+
+“walks in a cou-nterclockwisecircle and raisestheir hand totheir face toyawn.”“walks overto a chair sitsand then getsback up.”“walks up stair,holding a rail totheir left.”Music(Relaxing Ballet)seconds0102030 40keyframe 
+ 
+ 
+ 
+ 
+ 
+trol. Consider a scenario where a user aims to generate
+motion sequences integrating multiple modalities: starting
+from a video clip, transitioning to follow textual descrip-
+tions, syncing with audio cues, and aligning with another
+video, all while providing fine-grained control via user-
+defined keyframes. Such sequences must precisely repli-
+cate observed human movements, reflect intended actions
+described by text or music, and adhere consistently to spec-
+ified keyframes. While recent advances have made sig-
+nificant progress in individual tasks, achieving such pre-
+cision and flexibility across multiple modalities remains
+challenging. Specifically, motion estimation from videos
+typically involves deterministic predictions focused on ac-
+curacy, whereas text/music-to-motion generation requires
+diversity to all possible motions. Consequently,
+these
+tasks are usually treated independently despite sharing com-
+mon representations like temporal dynamics and kinematic
+structures. This separation limits cross-task knowledge
+transfer and requires maintaining distinct models.
+
+Recent studies have revealed the synergistic relationship
+between motion estimation and generation tasks. Genera-
+tive models [23, 57, 70] have provided robust priors for mo-
+tion estimation, particularly in challenging scenarios such
+as world-space estimation [6, 35, 41, 79]. Conversely, lever-
+aging large-scale video data for estimation has enhanced
+the realism of generative models by enriching their learned
+motion distributions [44]. This motivates developing a uni-
+fied generalist model capable of handling both tasks con-
+currently across multiple modalities. However, developing
+such a framework presents significant challenges due to the
+contrasting objectives of these tasks: generation requires
+producing diverse and plausible outputs from abstract in-
+puts like text or audio, while estimation demands precise
+motion reconstruction from concrete observations such as
+videos and keypoints. Creating a unified architecture that
+effectively balances diverse generation with accurate recon-
+struction while leveraging shared representations remains a
+complex challenge.
+
+To address these issues, we propose GENMO, a Gener-
+alist Model for Human Motion that unifies estimation and
+generation within a single framework. We formulate mo-
+tion estimation as constrained motion generation adhering
+to observed signals. This unification yields synergistic ben-
+efits: generative priors enhance plausibility in challenging
+estimation scenarios (e.g., occlusions), while diverse video
+data enrich generative diversity without requiring ground-
+truth 3D annotations.
+
+GENMO is built upon a diffusion model framework in-
+corporating a novel dual-mode training paradigm: (1) es-
+timation mode, where we feed the GENMO diffusion de-
+noiser with zero-initialized noise and the largest diffusion
+timestep, forcing the model to produce maximum likelihood
+estimation (MLE) of the motion based on the conditional
+
+signals; (2) generation mode, follows traditional diffusion
+training by sampling noisy motions and timesteps accord-
+ing to a predefined schedule, enabling the model to learn
+rich generative distributions from the conditioning signals.
+This dual-mode approach allows GENMO to excel at both
+precise estimation and diverse generation tasks. We further
+enhance the framework with an estimation-guided training
+objective that effectively leverages in-the-wild videos with
+2D annotations, substantially expanding the model’s gen-
+erative capabilities. Furthermore, our architectural innova-
+tions enable the processing of variable-length motion se-
+quences and seamlessly integrate arbitrary combinations of
+multi-modal conditioning signals at different time intervals,
+as demonstrated in Fig. 1. Notably, GENMO generates
+multi-conditioned motions in a single feedforward diffusion
+pass, without requiring complex post-processing steps.
+
+Through extensive empirical evaluation, we demonstrate
+GENMO’s capabilities across a comprehensive suite of
+tasks encompassing both global and local motion estima-
+tion, as well as diverse motion generation tasks including
+music-to-dance synthesis, text-to-motion generation, and
+motion-inbetweening. Our experimental results establish
+that GENMO achieves state-of-the-art performance across
+various tasks (global motion estimation, local motion esti-
+mation, and music-to-dance generation), validating its effi-
+cacy as a unified generalist framework for human motion
+modeling.
+
+Our contributions are summarized as follows:
+
+• We propose GENMO, the first generalist model unify-
+ing state-of-the-art global motion estimation with flex-
+ible human motion generation conditioned on videos,
+music, text, 2D keypoints, and 3D keyframes.
+
+• Our architecture design supports seamless generation of
+variable-length motions conditioned on arbitrary num-
+bers and combinations of multimodal inputs without
+complex post-processing.
+
+• We propose a novel dual-mode training paradigm to ex-
+plore the synergy between regression and diffusion, and
+introduce an estimation-guided training objective that
+enables effective training on in-the-wild videos.
+
+• We demonstrate bidirectional benefits: generative priors
+improve estimation under challenging conditions like
+occlusions; conversely, diverse video data enhances gen-
+erative expressiveness.
+
+2. Related Work
+
+2.1. Human Motion Generation
+
+Human motion generation has progressed significantly in
+recent years [3, 7, 10–12, 20, 21, 23, 24, 53, 53, 57, 62, 70,
+72, 77, 83, 84, 92] leveraging a variety of conditioning sig-
+nals such as text [8, 14, 19, 29], actions [16], speech [1, 91],
+music [42, 63, 66, 68, 71, 72], and scenes/objects [22, 37,
+
+2
+
+76, 80, 88]. Recently, multimodal motion generation has
+also gained attention [4, 47, 85, 90] enabling multiple input
+modalities. However, most existing methods focus solely
+on generative tasks without supporting estimation. For in-
+stance, the method [85] supports video input but treats it as
+a generative task, resulting in motions that loosely imitate
+video content rather than precisely matching it. In contrast,
+our method jointly handles generation and estimation tasks,
+yielding more precise video-conditioned results.
+
+For long-sequence motion generation, existing works
+mostly rely on ad-hoc post-processing techniques to stitch
+separately generated fixed-length motions [2, 52, 55, 86]. In
+contrast, our method introduces a novel diffusion-based ar-
+chitecture enabling seamless generation of arbitrary-length
+motions conditioned on multiple modalities without com-
+plex post-processing.
+
+Existing datasets, such as AMASS [48], are limited in
+size and diversity. To address the scarcity of 3D data,
+Motion-X [44] and MotionBank [78] augment datasets us-
+ing 2D videos and 3D pose estimation models [61, 82], but
+the resulting motions often contain artifacts.
+In contrast,
+our method directly leverages in-the-wild videos with 2D
+annotations without explicit 3D reconstruction, reducing re-
+liance on noisy data and enhancing robustness and diversity.
+
+2.2. Human Motion Estimation
+
+Human pose estimation from images [30, 39, 59], videos [9,
+15, 33], or even sparse marker data [38, 54, 81] has been
+studied extensively in the literature. Recent works focus pri-
+marily on estimating global human motion in world-space
+coordinates [35, 41, 61, 75, 79, 82]. This is an inherently
+ill-posed problem, hence these methods leverage generative
+priors and SLAM methods to constrain human and camera
+motions, respectively. However, these methods typically in-
+volve computationally expensive optimization or separate
+post-processing steps.
+
+More recent approaches aim to estimate global human
+motion in a feed-forward manner [60, 61, 75, 87], offer-
+ing faster solutions. Our method extends this direction by
+jointly modeling generation and estimation within a uni-
+fied diffusion framework. This integration leverages shared
+representations and generative priors during training to pro-
+duce more plausible estimations.
+
+3. Generalist Model for Human Motion
+
+GENMO unifies motion estimation and generation by
+formulating both tasks as conditional motion generation.
+Specifically, it synthesizes a human motion sequence x of
+length N based on a set of condition signals C and a set
+of corresponding condition masks M, where N can be ar-
+bitrarily large. The condition set C includes one or more
+of the following: video feature cvideo ∈ RN ×dvideo, camera
+motion ccam ∈ RN ×dcam, 2D skeleton c2d ∈ RN ×d2d, music
+
+clip cmusic ∈ RN ×dmusic , 2d bounding box cbbox ∈ RN ×dbbox ,
+or natural language ctext ∈ RM ×dtext that describes the mo-
+tion where M is the number of text tokens. The condition
+mask M consists of the mask m⋆ ∈ RN ×d⋆ for each con-
+dition type c⋆ in C. The mask matrix is of the same size as
+the condition feature and its element is one if the condition
+feature is available and zero otherwise.
+
+Joint Local and Global Motion Representation. We now
+introduce the motion representation we use for x. Most text-
+to-motion generation methods adopt an egocentric motion
+representation that encodes human motion in a heading-free
+local coordinate system. However, for motion estimation,
+human motions are typically represented in the camera co-
+ordinate system to ensure better image feature alignment
+that facilitates learning.
+In this work, to obtain a unified
+generation and estimation model, we adopt a general hu-
+man motion representation that encodes both the egocen-
+tric and camera-space human motions, along with the cam-
+era poses. Our approach leverages the gravity-view coor-
+dinate system [60], where the global trajectory of a person
+gv ∈ R6
+at frame i includes the gravity-view orientation Γi
+root ∈ R3. The local motion at
+and the local root velocities vi
+the i-th frame is represented as the SMPL [45] parameters,
+which consists of joint angles θi ∈ R24×6, shape param-
+root ∈ R3. Camera
+eters βi ∈ R10, and root translation ti
+pose information at frame i is encoded through the camera-
+to-world transformation πi = (cid:0)Γi
+(cid:1), comprising the
+cv ∈ R6 and camera translation
+camera-view orientation Γi
+cv ∈ R3. Additionally, we include contact labels pi ∈ R6
+ti
+for hands and feet (heels and toes). The complete motion se-
+quence x = (cid:8)xi(cid:9)N
+i=1 encompasses N human poses, where
+each pose xi ∈ RD consists of global motion, local motion,
+and camera pose:
+
+cv, ti
+cv
+
+xi = (cid:0)Γi
+
+gv, vi
+
+root, θi, βi, ti
+
+root, πi, pi(cid:1).
+
+(1)
+
+3.1. Unified Estimation and Generation Design
+
+In this section, we will present the architectural design of
+GENMO and elucidates how it unifies motion estimation
+and generation within a single model. The model architec-
+ture, illustrated in Figure 2, transforms a noisy motion se-
+quence xt with the conditions C and condtion masks M into
+a clean motion sequence x0 through a series of carefully de-
+signed components. The initial processing stage consists of
+an additive fusion block that converts xt into a sequence of
+per-frame motion tokens. This block utilizes dedicated mul-
+tilayer perceptrons (MLPs) to process each condition type
+in C independently, combines their features through sum-
+mation to create a unified condition representation, which
+is further fused with noisy motion xt to produce the motion
+token sequence. The resulting sequence is subsequently
+processed through L GENMO modules, each comprising
+a RoPE-based Transformer block and our novel multi-text
+
+3
+
+Figure 2. GENMO Model Design supports the generation of
+variable-length motion sequences in a single pass and enables
+seamless integration of multimodal conditioning signals, support-
+ing both human motion generation and estimation.
+
+injection block. Our architecture leverages Rotary Position
+Embedding (RoPE) [65], which computes attention based
+on relative temporal positions. This design choice enables
+processing of variable-length sequences and accommodates
+conditions lacking inherent temporal ordering, such as im-
+ages and 2D skeletons.
+
+However,
+
+text conditioning poses unique challenges.
+Unlike frame-aligned modalities such as video and mu-
+sic, text is not aligned with the motion frames. The con-
+ventional approach of concatenating text with the motion
+sequence is inadequate as inserting text at any positions
+can introduce temporal bias. To address this challenge,
+we propose a novel multi-text injection block that facili-
+tates text-conditioned motion generation while accommo-
+dating multiple text inputs (K) with user-specified time
+windows. The multi-text injection block comprises a trans-
+former block with our proposed multi-text attention mech-
+anism at its core. As depicted in Figure 3, the multi-text at-
+tention mechanism processes K text embedding sequences
+text, c2
+c1
+text alongside the input motion feature se-
+quence fin to generate the output feature sequence fout:
+
+text, . . . , cK
+
+Figure 3. Multi-text attention enables flexible conditioning with
+multiple text inputs, each constrained to its specified time window.
+
+ing time window. Although the mask introduces disconti-
+nuities at time window boundaries, GENMO successfully
+generates smooth motion sequences through the subsequent
+RoPE-based transformer block, which effectively captures
+and models temporal motion dynamics.
+
+Inference with Arbitrary Motion Length. Our ar-
+chitecture employs relative positional embeddings rather
+than absolute embeddings for motion sequences, allowing
+GENMO to generate motions of arbitrary length in a single
+diffusion forward pass while naturally incorporating mul-
+tiple text inputs across different time spans. During infer-
+ence, we adopt a sliding window attention mechanism in
+the RoPE-based Transformer block, where each token at-
+tends only to tokens within a W -frame neighborhood. This
+design enables the generation of motion sequences longer
+than those seen during training while preserving compu-
+tational efficiency and ensuring smooth, coherent motion
+transitions.
+
+fout =
+
+Ωk(i, j) =
+
+K
+(cid:88)
+
+k=1
+(cid:40)
+
+1
+0
+
+MaskedMHA(cid:0)fin, ck
+
+text, Ωk
+
+(cid:1).
+
+if i is within time window of text k
+otherwise
+
+(2)
+
+(3)
+
+where MaskedMHA(·) represents a masked variant of the
+conventional multi-head attention mechanism. For each text
+input k, we employ a binary mask Ωk that assumes a value
+of one when timestep i lies within the designated time win-
+dow of text k, and zero otherwise. Through the multipli-
+cation of attention weights with mask Ωk, we effectively
+restrict the influence of each text prompt to its correspond-
+
+Mixed Multimodal Conditions. When conditioned on
+multiple modalities, our framework employs a princi-
+pled approach for generation: text conditions, which lack
+frame-level alignment, are processed through our special-
+ized multi-text attention mechanism, while frame-aligned
+modalities (e.g., video, music, 2D skeleton) are managed
+through a temporal masking strategy. As mentioned be-
+fore, for each condition c⋆, we use a mask m⋆ of the same
+size to indicate whether the condition feature is (partially)
+present at each frame (one for present, zero otherwise). We
+also multiply the mask with the condition feature to nul-
+lify missing features. This simple yet effective approach
+enables seamless transitions between different conditioning
+modalities while maintaining temporal coherence.
+
+4
+
+Additive FusionPerframe Motion TokenRoPE-based TransformerMulti-Text InjectionBlockw/ Multi-Text AttentionClean MotionNoisy MotionText 1Text 2Text KGENMO ModuleConditionsCondition MasksText 1Text 2Text KQueryKey&ValueAttentionMatrixText 1WindowText 2WindowText KWindowInput SequenceOutput SequenceAttentionOutput3.2. Dual-Mode Training Paradigm
+
+As a diffusion model, GENMO can theoretically be trained
+with the standard DDPM [26] objective:
+
+Lgen = Et∼[1,T ],xt∼q(xt|x0)
+
+(cid:13)x0 −G(xt, t, C, M)(cid:13)
+(cid:2)(cid:13)
+2(cid:3) , (4)
+(cid:13)
+
+where t the sampled diffusion timestep, and xt is the noisy
+motion sampled from the forward diffusion process. Ide-
+ally, the model trained with this objective should be capable
+of generating motion sequences that satisfy the condition
+set C and mask M, so it can be used as a motion estima-
+tion model when provided with video cvideo or 2D skeleton
+c2d conditions. However, we found that such a generative
+training objective is not enough to generate accurate mo-
+tion sequences that are consistent with the input video. We
+observe a fundamental difference between motion estima-
+tion and text-to-motion generation tasks: motion estimation
+results exhibit substantially lower variability. To investigate
+this phenomenon, we trained separate diffusion models for
+text-to-motion generation and video-conditioned motion es-
+timation, then visualized their predictions across all diffu-
+sion steps and different initial latent noises (Fig. 4). The
+results demonstrate that the video-conditioned model be-
+haves more deterministically, in other words, the first-step
+prediction closely resembles predictions from subsequent
+steps with minimal variation. In contrast, the text-to-motion
+model exhibits significantly higher variance among steps.
+This observation has important implications for the estima-
+tion task: the accuracy of the first-step prediction becomes
+critical, as errors introduced early in the diffusion process
+are difficult to correct in later steps. Based on this insight,
+we propose a dual-mode training paradigm, which consists
+of (1) an estimation mode and (2) a generation mode. In-
+tuitively, this dual-mode approach reinforces the quality of
+first-step predictions while maintaining the model’s genera-
+tive capabilities.
+
+Estimation Mode.
+In the estimation mode, we formu-
+late the problem as a regression task, employing maxi-
+mum likelihood estimation to learn the conditional distribu-
+tion q(x|C, M). This approach yields the following mean-
+square error (MSE) objective:
+
+Lest = Ez∼N (0,I)
+
+(cid:2)(cid:13)
+(cid:13)x0 − G(z, T, C, M)(cid:13)
+2(cid:3) .
+(cid:13)
+
+(5)
+
+Rather than using noisy motion xt, we utilize pure Gaussian
+noise z ∼ N (0, I) as input to the model, along with the cor-
+responding maximum diffusion timestep T . This formula-
+tion ensures that the estimation mode aligns with the inher-
+ent variance characteristics of the diffusion model, thereby
+preventing conflicts between the generation and estimation
+modes.
+
+To further enhance the quality of predicted motion se-
+quences, we incorporate geometric regularization losses
+
+Figure 4. Variance of video/text conditioned predictions. Left:
+Intermediate predictions across 50 DDIM denoising steps. Right:
+Predictions with 10 different initial noises (including zero-noise).
+Motions are transparent except the first-step and zero-noise predic-
+tions. Video conditioning yields more deterministic outputs com-
+pared to text conditioning.
+
+Lgeo following established approaches in the literature [57,
+70]. It involves decoding the predicted motion sequences
+into SMPL joints and vertices, followed by the application
+of constraints on world-space and camera-space vertices po-
+sitions, world-space and camera-space joint positions, and
+joint contacts. In scenarios where only 2D annotations are
+available, we employ a 2D reprojection loss to effectively
+regularize the predicted motion sequences.
+
+Generation Mode. For data with clean 3D annotations x0,
+we can directly employ the standard diffusion objective in
+Eq. 4 to train the generation mode. In this section, we pri-
+marily focus on the more interesting scenario where only
+2D annotations are available for the generation mode.
+
+Unlike 3D annotations, 2D pose labels are more readily
+accessible through manual annotation or by applying robust
+2D pose estimators on large-scale video datasets. 2D data
+also offers greater diversity compared to existing 3D motion
+capture data, which is constrained by the limited variety of
+subjects, motions, appearances, and environments.
+
+Due to its inherent estimation capability, GENMO can
+naturally leverage 2D data for training the generation mode.
+Specifically, we propose an estimation-guided generation
+training strategy. First, we generate a pseudo-clean mo-
+tion from the estimation mode using video or 2D skeleton
+as conditions: ˆx0 = G(z, T, C). Subsequently, we sample
+a noisy motion sequence ˆxt through the forward diffusion
+process: q(cid:0)ˆxt|ˆx0
+(cid:1). We then apply a 2D reprojection loss on
+the predicted clean motion using the 2D keypoint annota-
+tions x2d:
+
+Lgen-2D = Eˆxt∼q(ˆxt|ˆx0),t∼[1,T ]
+
+(cid:2)(cid:13)
+(cid:13)x2d − Π(G(ˆxt, t, C))(cid:13)
+2(cid:3),
+(cid:13)
+(6)
+where Π represents the 2D projection function. For the gen-
+eration mode, we also apply the aforementioned geometric
+losses Lgeo to regularize the predicted motion sequences.
+
+5
+
+Text ConditionVideo ConditionDifferent TimestepsDifferent Samples“A person turnsaround, walksforward, turnsaround, and thenwalks back.”Training Mode Selection. We train the model on diverse
+datasets with various types of modalities. When training
+on datasets with strong conditioning signals that render the
+motion distribution more deterministic, such as video or
+2D skeletons, we utilize both the estimation and genera-
+tion modes to train GENMO. Conversely, when training on
+datasets with abstract conditions that result in more gener-
+ative motion distributions, such as text and music, we ex-
+clusively employ the generation mode. This mode selection
+principle is applied to both 3D and 2D data.
+
+4. Experiments
+
+We evaluate the performance of GENMO on four different
+tasks including video-to-motion, music-to-dance, text-to-
+motion, and motion in-betweening. Note that for all exper-
+iments we use a single one-in-all checkpoint jointly trained
+for all tasks unless stated otherwise.
+
+Datasets. GENMO is trained on a diverse collection of
+motion datasets spanning multiple tasks: (1) motion cap-
+ture data from AMASS [48]; (2) motion estimation bench-
+marks including BEDLAM [5], Human3.6M [28], and
+3DPW [73]; (3) music-to-dance data from AIST++ [42]; (4)
+text-to-motion data from HumanML3D [17]; (5) 2D key-
+points and text descriptions from Motion-X [44]. Compre-
+hensive details regarding the training procedure and imple-
+mentation are provided in Appendix A.
+
+For evaluation, we use RICH [27], and EMDB [31] for
+global human motion estimation, 3DPW [73] for local hu-
+man motion estimation, AIST++ [42] for music-to-dance
+generation, and HumanML3D [17] and Motion-X [44] for
+text-to-motion generation.
+
+Evaluation Metrics. For music-to-dance generation, we
+follow the standard evaluation metrics [42, 71] and report
+the FID, Diversity, PFC, and BAS. For text-to-motion gen-
+eration, we follow the standard evaluation metrics in previ-
+ous works [17, 70] and report the R-Precision (Top 3), FID,
+Diversity, and MultiModal Dist. We also test the motion in-
+betweening performance by reporting the WA-MPJPE and
+PA-MPJPE for all the keyframes.
+
+For motion estimation, we report MPJPE, PA-MPJPE,
+and PVE to evaluate the local motion. Acceleration er-
+ror (Accel) is also reported to measure the smoothness of
+the motion. For global motion estimation, we report W-
+MPJPE100 and WA-MPJPE100. We also evaluate the er-
+ror accumulation over long sequences by reporting RTE in
+%. Jitters and foot sliding (FS) during contacts are also re-
+ported.
+
+4.1. Evaluation of Motion Estimation
+
+Global Motion Estimation. We compare GENMO with
+state-of-the-art (SOTA) methods for recovering global hu-
+man motion from videos with dynamic cameras. To en-
+sure fair comparison across methods that employ differ-
+ent SLAM techniques during inference, we also report re-
+sults using ground-truth camera parameters provided by the
+datasets. As shown in Table 1, GENMO consistently out-
+performs specialized methods trained exclusively for hu-
+man motion estimation. Notably, our approach achieves
+a W-MPJPE of 202.1 mm on the EMDB dataset, surpass-
+ing TRAM [75] (222.4 mm) despite both methods utilizing
+identical SLAM systems and backbone features for video
+encoding. This performance advantage stems from our uni-
+fied motion generation and estimation framework, where
+the generative prior enhances the quality of reconstructed
+motions. GENMO also demonstrates superior performance
+on the RICH dataset compared to all existing methods. Ex-
+tensive qualitative results are provided in the supplementary
+videos.
+
+Local Motion Estimation. We evaluate GENMO against
+SOTA methods for local 3D human motion estimation.
+Quantitative results in Table 2 demonstrate that GENMO
+surpasses existing approaches across most metrics. Ad-
+ditionally, we present results without training on 2D-only
+data, where the observed performance degradation high-
+lights the effectiveness of our estimation-guided 2D train-
+ing objective. Further evaluation on the challenging 3DPW-
+XOCC dataset [40] reveals that our generative prior enables
+GENMO to maintain robust performance even under severe
+occlusions and truncations. Comprehensive analyses and
+results on 3DPW-XOCC are provided in Appendix E.
+
+4.2. Evaluation of Motion Generation
+
+Comparison on Music-to-Dance. We evaluate music-to-
+dance generation performance on the AIST++ dataset [42],
+with results presented in Table 3. GENMO is benchmarked
+against SOTA methods and a specialized variant of our
+model trained exclusively on AIST++ for music-to-dance
+generation. Notably, our generalist model, jointly trained
+across multiple estimation and generation tasks, demon-
+strates substantially enhanced motion diversity, physical
+plausibility, and motion-music correlation, as evidenced
+by superior Divk, Divm, PFC, and BAS metrics. While
+GENMO exhibits higher FID values compared to the spe-
+cialized music-only variant, this performance differential
+is expected given that our generalist model was trained
+on considerably more heterogeneous motion data spanning
+multiple tasks and domains.
+
+Qualitative Results. We provide extensive qualitative re-
+sults in the supplementary videos, demonstrating the effec-
+tiveness and versatility of GENMO.
+
+Comparison on Text-to-Motion. We evaluate the text-
+to-motion generation capabilities of GENMO on both Hu-
+manML3D (Table 4) and Motion-X (Table 5) datasets. Our
+
+6
+
+Table 1. World-grounded human motion estimation. We evaluate the global motion quality on the EMDB-2 [31] dataset and RICH [27].
+Parenthesis denotes the number of joints used to compute WA-MPJPE100, W-MPJPE100 and Jitter.
+
+Models
+
+WA-MPJPE100 W-MPJPE100 RTE
+
+Jitter
+
+Foot-Sliding WA-MPJPE100 W-MPJPE100 RTE
+
+Jitter
+
+Foot-Sliding
+
+EMDB (24)
+
+RICH (24)
+
+GLAMR [82]
+TRACE [67]
+SLAHMR [79]
+COIN [41]
+WHAM (w/ DPVO) [61]
+WHAM (w/ GT extrinsics) [61]
+GVHMR (w/ DPVO) [60]
+GVHMR (w/ GT extrinsics) [60]
+TRAM (w/ DROID-SLAM) [75]
+
+Ours (w/ DROID-SLAM)
+Ours (w/ GT extrinsics)
+
+280.8
+529.0
+326.9
+152.8
+135.6
+131.1
+111.0
+109.1
+76.4
+
+74.3
+69.5
+
+726.6
+1702.3
+776.1
+407.3
+354.8
+335.3
+276.5
+274.9
+222.4
+
+202.1
+185.9
+
+46.3
+
+11.4
+17.7 2987.6
+10.2
+3.5
+6.0
+4.1
+2.0
+1.9
+1.4
+
+31.3
+-
+22.5
+21.0
+16.7
+16.5
+-
+
+1.2
+0.9
+
+17.8
+17.7
+
+20.7
+370.7
+14.5
+-
+4.4
+4.4
+3.5
+3.5
+-
+
+8.8
+8.6
+
+129.4
+238.1
+98.1
+-
+109.9
+109.9
+78.8
+78.8
+-
+
+75.3
+75.3
+
+236.2
+925.4
+186.4
+-
+184.6
+184.6
+126.3
+126.3
+-
+
+118.6
+118.6
+
+3.8
+49.7
+610.4 1578.6
+34.3
+28.9
+-
+-
+19.7
+4.1
+19.7
+4.1
+12.8
+2.4
+12.8
+2.4
+-
+-
+
+1.9
+1.9
+
+15.0
+15.0
+
+18.1
+230.7
+5.1
+-
+3.3
+3.3
+3.0
+3.0
+-
+
+6.7
+6.7
+
+Table 2. Camera-space metrics. We evaluate the camera-space motion quality on the 3DPW [73], RICH [27] and EMDB-1 [31] datasets.
+∗ denotes models trained with the 3DPW training set.
+
+Models
+e CLIFF∗ [43]
+m
+HybrIK∗ [39]
+a
+r
+f
+HMR2.0 [15]
+-
+r
+e
+ReFit∗ [74]
+p
+VIBE∗ [33]
+TRACE∗ [67]
+SLAHMR [79]
+PACE [35]
+WHAM∗ [61]
+GVHMR∗ [60]
+TRAM∗ [75]
+
+l
+a
+r
+o
+p
+m
+e
+t
+
+Ours∗ (w/o 2D Training)
+Ours∗
+
+3DPW (14)
+
+RICH (24)
+
+EMDB (24)
+
+PA-MPJPE MPJPE PVE Accel PA-MPJPE MPJPE
+
+PVE Accel PA-MPJPE MPJPE
+
+PVE Accel
+
+43.0
+41.8
+44.4
+40.5
+
+51.9
+50.9
+55.9
+–
+35.9
+36.2
+35.6
+
+35.2
+34.6
+
+69.0 81.2 22.5
+71.6 82.3
+69.8 82.2 18.1
+65.3 75.1 18.5
+
+–
+
+–
+–
+
+82.9 98.4 18.5
+79.1 95.4 28.6
+–
+–
+–
+–
+57.8 68.7 6.6
+55.6 67.2 5.0
+59.3 69.6 4.9
+
+55.4 67.0 4.8
+53.9 65.8 5.2
+
+56.6
+56.4
+48.1
+47.9
+
+68.4
+–
+52.5
+49.3
+44.3
+39.5
+-
+
+40.6
+39.1
+
+102.6 115.0 22.4
+96.8 110.4
+96.0 110.9 18.8
+92.9 17.1
+80.7
+
+–
+
+120.5 140.2 21.8
+–
+–
+–
+91.2
+74.4
+-
+
+–
+–
+–
+80.0
+66.0
+-
+
+–
+9.4
+8.8
+5.3
+4.1
+-
+
+66.4
+66.8
+
+75.4
+75.4
+
+4.0
+4.1
+
+68.1
+65.6
+60.6
+58.6
+
+81.4
+70.9
+69.5
+–
+50.4
+42.7
+45.7
+
+44.3
+42.5
+
+103.3 128.0 24.5
+103.0 122.2
+98.0 120.3 19.8
+88.0 104.5 20.7
+
+–
+
+125.9 146.8 26.6
+109.9 127.4 25.5
+93.5 110.7 7.1
+–
+–
+5.3
+94.4
+3.6
+84.2
+4.9
+86.6
+
+–
+79.7
+72.6
+74.4
+
+76.0
+73.0
+
+88.9
+84.8
+
+4.3
+3.8
+
+Table 3. Benchmark of Music-to-Dance Generation. Motion
+quality is evaluated on the AIST++ [42] dataset.
+
+Methods
+
+FIDk ↓
+
+FIDm ↓
+
+Divk ↑
+
+Divm ↑
+
+PFC ↓
+
+BAS ↑
+
+FACT [42]
+Bailando [63]
+EDGE [71]
+
+Ours (music only)
+Ours
+
+86.43
+28.16
+42.16
+
+16.10
+40.91
+
+43.46
+9.62
+22.12
+
+13.91
+18.51
+
+6.85
+7.83
+3.96
+
+8.47
+10.09
+
+3.32
+6.34
+4.61
+
+7.26
+7.48
+
+2.2543
+1.754
+1.5363
+
+0.7340
+0.3702
+
+0.1607
+0.2332
+0.2334
+
+0.2282
+0.2708
+
+Table 4. Benchmark of Text-to-Motion Generation on the Hu-
+manML3D [17] dataset. R@3 denotes R-Precision (Top 3).
+
+Methods
+
+Real
+
+T2M [18]
+MDM [70]
+M2DM [36]
+EMDM [89]
+
+Rep.
+
+R@3 ↑
+
+FID ↓
+
+MM Dist ↓
+
+Diversity →
+
+HumanML3D
+
+HumanML3D
+HumanML3D
+HumanML3D
+HumanML3D
+
+0.797
+
+0.740
+0.611
+0.763
+0.786
+
+0.556
+0.632
+
+0.002
+
+1.067
+0.544
+0.352
+0.112
+
+0.245
+0.216
+
+2.974
+
+3.340
+5.566
+3.134
+3.110
+
+3.128
+3.466
+
+9.503
+
+9.188
+9.559
+9.926
+9.551
+
+11.660
+11.342
+
+Ours (w/o 2D Training)
+Ours
+
+SMPL
+SMPL
+
+Table 5. Benchmark of Text-to-Motion Generation. Motion
+quality is evaluated on the Motion-X [44] dataset.
+
+Methods
+
+Real
+
+MDM [70]
+Ours (w/o 2D Training)
+Ours
+
+R@3 ↑
+
+FID ↓
+
+MM Dist ↓
+
+Diversity →
+
+0.791
+
+0.313
+0.401
+0.472
+
+0.001
+
+2.389
+0.515
+0.207
+
+2.823
+
+6.745
+5.210
+4.801
+
+11.702
+
+8.720
+12.124
+11.719
+
+method demonstrates superior performance compared to the
+baseline model MDM [70], exhibiting enhanced motion
+
+7
+
+fidelity and improved text-prompt correspondence across
+both benchmarks. To assess the impact of 2D data train-
+ing, we compare GENMO with its variant without training
+on Motion-X’s 2D data. The results indicate that incor-
+porating 2D training substantially enhances motion gener-
+ation performance across both HumanML3D and Motion-
+X datasets. These findings substantiate the efficacy of
+leveraging 2D data within GENMO’s framework for text-
+conditioned motion generation tasks.
+
+Discussion on HumanML3D Performance. Although
+GENMO exhibits worse performance compared to SOTA
+methods like EMDM [89], this discrepancy can be stemmed
+from our representation choice: GENMO utilizes SMPL pa-
+rameters to represent human motion for unified estimation
+and generation, whereas SOTA methods employ the Hu-
+manML3D representation — the same representation used
+by the encoders of the FID and R-Precision metrics. This
+representational mismatch introduces an inherent disad-
+vantage for GENMO, as it necessitates bidirectional conver-
+sion of ground-truth motions from HumanML3D to SMPL
+during training and conversion of our generated motions to
+the HumanML3D format during evaluation. These con-
+version processes inevitably introduce distribution shifts
+through alterations in bone lengths, joint angles, and joint
+velocities, consequently affecting performance metrics and
+limiting the upper bound of GENMO’s achievable perfor-
+
+Table 6. Motion In-betweening Experiments. The DDPM base-
+line is the proposed method without the estimation objective, only
+using the standard diffusion objective for training. “w/o Estima-
+tion.” is the proposed method without training for the motion esti-
+mation task. “w/o 2D Training” is trained without Lgen-2D. Results
+are reported using PA-MPJPE/WA-MPJPE.
+
+HumanML3D
+
+Motion-X
+
+Models
+
+2-Keyframe 5-Keyframe 2-Keyframe 5-Keyframe
+
+71.6/98.8
+Diffusion-only
+64.9/97.5
+w/o Estimation
+w/o 2D Training 56.4/85.1
+
+46.3/70.4 97.6/154.9 56.3/106.9
+47.5/72.6 97.9/151.0 69.6/116.4
+36.7/59.5 68.3/136.8 44.6/98.6
+
+Ours
+
+53.5/85.3
+
+37.1/58.5 58.8/122.7 40.5/89.5
+
+Table 7. Ablation studies on motion estimation. The DDPM
+baseline is the proposed method without the estimation objective,
+only using the standard diffusion objective for training. The re-
+gression baseline is the proposed method without the generation
+objective.
+
+RICH (24)
+
+EMDB (24)
+
+Models
+
+WA-MPJPE100 W-MPJPE100 WA-MPJPE100 W-MPJPE100
+
+Diffusion-only
+Regression-only
+
+Ours
+
+88.9
+87.0
+
+81.3
+
+143.9
+141.0
+
+130.6
+
+128.6
+121.1
+
+114.6
+
+307.7
+300.1
+
+281.7
+
+mance on these HumanML3D-specific metrics.
+
+Experiments on Motion In-betweening. We further
+evaluate the performance of conditional motion genera-
+tion through the motion in-betweening task, following the
+methodology of prior diffusion-based approaches [70] by
+overwriting the noisy motion with the keyframe poses be-
+fore each denoising step. Experiments are conducted on
+both HumanML3D and Motion-X test sets under two con-
+figurations with either 2 or 5 sampled keyframes. As shown
+in Table 6, GENMO achieves superior performance through
+its unified estimation and generation training compared to
+the diffusion-only baseline. Furthermore, the incorporation
+of additional 2D-only data and joint training with video-
+conditioned motion estimation substantially enhances mo-
+tion in-betweening quality.
+
+4.3. Ablation Study
+
+Impact of the Estimation Mode. To assess the efficacy
+of our proposed estimation mode, we evaluate a variant of
+our method trained exclusively with the generation mode
+(“Diffusion-only”). Table 7 presents quantitative compar-
+isons of global human motion estimation performance on
+the RICH and EMDB datasets, using direct model pre-
+dictions without post-processing for static joints. The re-
+sults demonstrate that omitting the estimation objective sig-
+nificantly degrades global motion estimation performance,
+confirming the estimation objective’s crucial role in en-
+hancing consistency between predicted motions and input
+videos. This finding is further corroborated by the motion
+in-betweening results in Table 6, which similarly indicate
+
+Table 8. Effect of inference steps on motion generation and esti-
+mation performance.
+
+HumanML3D (Gen.)
+
+EMDB (Est.)
+
+Models
+
+Step=1 (Regression)
+Step=2
+Step=5
+Step=10
+Step=50
+
+FID
+0.260±.101
+0.242±.083
+0.231±.091
+0.237±.126
+0.216±.119
+
+W-MPJPE100 MPJPE
+
+280.0
+276.8
+274.9
+275.8
+278.7
+
+73.0
+72.5
+72.2
+72.3
+72.7
+
+that the estimation objective improves in-betweening per-
+formance.
+
+Impact of the Generation Mode. We compare our uni-
+fied model against a pure regression baseline (trained solely
+with the estimation mode, akin to SOTA human motion
+estimation methods) to evaluate the impact of the genera-
+tion objective. Quantitative comparisons on the RICH and
+EMDB datasets (Table 7) reveal that our unified model con-
+sistently outperforms the regression baseline, suggesting
+that incorporating generative priors enhances motion qual-
+ity in human motion estimation tasks.
+
+Different Inference Steps. We evaluate the impact of
+denoising steps using the standard DDIM [64] inference
+pipeline. As shown in Table 8, motion estimation perfor-
+mance remains relatively stable across different step counts,
+while text-to-motion generation shows greater sensitivity.
+Notably, single-step denoising sufficiently produces video-
+consistent human motions, with optimal estimation perfor-
+mance achieved at 5 inference steps — a balance that effec-
+tively leverages generative priors without introducing ex-
+cessive variance.
+
+5. Conclusion
+
+In this work, we introduced GENMO, a generalist frame-
+work for human motion modeling that bridges the gap be-
+tween motion estimation and generation tasks. We showed
+that GENMO can effectively leverage shared representa-
+tions to enable synergistic benefits: generative priors en-
+hance motion estimation robustness under challenging con-
+ditions, while diverse video data enriches the generative
+capabilities. GENMO can produce variable-length motion
+generation in a single pass and supports flexible control us-
+ing text, videos, music, 2D keypoints, and 3D keyframes.
+GENMO achieved state-of-the-art performance on both mo-
+tion estimation and generation benchmarks, while also re-
+ducing reliance on 3D motion capture data. Extensive ex-
+periments demonstrated that GENMO is not only capable
+of handling multiple human motion tasks within a single
+framework but also achieves superior results compared to
+task-specific models.
+
+As with any other work, GENMO has some limitations.
+Currently, it relies on off-the-shelf SLAM methods to ob-
+
+8
+
+tain camera parameters for videos. Integrating camera esti-
+mation inside GENMO is an interesting future work. More-
+over, currently, our model only supports full-body motion.
+We plan to enable facial expressions and hand articulation
+in the future.
+
+References
+
+[1] Simon Alexanderson, Rajmund Nagy, Jonas Beskow, and
+Gustav Eje Henter. Listen, denoise, action! audio-driven
+motion synthesis with diffusion models. ACM Transactions
+on Graphics (TOG), 2023. 2
+
+[2] Nikos Athanasiou, Mathis Petrovich, Michael J. Black, and
+G¨ul Varol. TEACH: Temporal action composition for 3D
+humans. In International Conference on 3D Vision (3DV),
+2022. 3
+
+[3] Emad Barsoum, John Kender, and Zicheng Liu. HP-GAN:
+Probabilistic 3D human motion prediction via GAN.
+In
+CVPR Workshops, 2018. 2
+
+[4] Yuxuan Bian, Ailing Zeng, Xuan Ju, Xian Liu, Zhaoyang
+Zhang, Wei Liu, and Qiang Xu. Motioncraft: Crafting
+whole-body motion with plug-and-play multimodal controls.
+arXiv preprint arXiv:2407.21136, 2024. 3
+
+[5] Michael J. Black, Priyanka Patel, Joachim Tesch, and Jin-
+long Yang. BEDLAM: A synthetic dataset of bodies ex-
+In Proceedings
+hibiting detailed lifelike animated motion.
+IEEE/CVF Conf. on Computer Vision and Pattern Recogni-
+tion (CVPR), pages 8726–8737, 2023. 6, 12
+
+[6] Federica Bogo, Angjoo Kanazawa, Christoph Lassner, Peter
+Gehler, Javier Romero, and Michael J Black. Keep it SMPL:
+Automatic estimation of 3D human pose and shape from a
+single image. In ECCV, 2016. 2
+
+[7] Pablo Cervantes, Yusuke Sekikawa, Ikuro Sato, and Koichi
+Shinoda. Implicit neural representations for variable length
+human motion generation. In ECCV, 2022. 2
+
+[8] Xin Chen, Biao Jiang, Wen Liu, Zilong Huang, Bin Fu, Tao
+Chen, Jingyi Yu, and Gang Yu. Executing your commands
+via motion diffusion in latent space. In CVPR, 2023. 2
+[9] Hongsuk Choi, Gyeongsik Moon, and Kyoung Mu Lee. Be-
+yond static features for temporally consistent 3d human pose
+and shape from a video. In CVPR, 2021. 3
+
+[10] B. Chopin, N. Otberdout, M. Daoudi, and A. Bartolo. Human
+motion prediction using manifold-aware wasserstein gan. In
+FG, 2021. 2
+
+[11] Setareh Cohan, Guy Tevet, Daniele Reda, Xue Bin Peng, and
+Michiel van de Panne. Flexible motion in-betweening with
+diffusion models. SIGGRAPH, 2024.
+
+[12] Wenxun Dai, Ling-Hao Chen, Jingbo Wang, Jinpeng Liu, Bo
+Dai, and Yansong Tang. Motionlcm: Real-time controllable
+motion generation via latent consistency model. In ECCV,
+2024. 2
+
+[13] Xiao Fu, Wei Yin, Mu Hu, Kaixuan Wang, Yuexin Ma, Ping
+Tan, Shaojie Shen, Dahua Lin, and Xiaoxiao Long. Geowiz-
+ard: Unleashing the diffusion priors for 3d geometry esti-
+In European Conference on
+mation from a single image.
+Computer Vision, pages 241–258. Springer, 2024. 14
+
+[14] Anindita Ghosh, Noshaba Cheema, Cennet Oguz, Christian
+Theobalt, and Philipp Slusallek. Synthesis of compositional
+animations from textual descriptions. In ICCV, 2021. 2
+[15] Shubham Goel, Georgios Pavlakos, Jathushan Rajasegaran,
+Angjoo Kanazawa, and Jitendra Malik. Humans in 4d: Re-
+In
+constructing and tracking humans with transformers.
+Proceedings of the IEEE/CVF International Conference on
+Computer Vision, pages 14783–14794, 2023. 3, 7
+
+[16] Chuan Guo, Xinxin Zuo, Sen Wang, Shihao Zou, Qingyao
+Sun, Annan Deng, Minglun Gong, and Li Cheng. Ac-
+tion2Motion: Conditioned generation of 3D human mo-
+In ACM International Conference on Multimedia
+tions.
+(ACMMM), 2020. 2
+
+[17] Chuan Guo, Shihao Zou, Xinxin Zuo, Sen Wang, Wei Ji,
+Xingyu Li, and Li Cheng. Generating diverse and natural 3d
+human motions from text. In Proceedings of the IEEE/CVF
+Conference on Computer Vision and Pattern Recognition
+(CVPR), pages 5152–5161, 2022. 6, 7, 12, 13
+
+[18] Chuan Guo, Shihao Zou, Xinxin Zuo, Sen Wang, Wei Ji,
+Xingyu Li, and Li Cheng. Generating diverse and natural 3d
+human motions from text. In Proceedings of the IEEE/CVF
+conference on computer vision and pattern recognition,
+pages 5152–5161, 2022. 7
+
+[19] Chuan Guo, Xinxin Zuo, Sen Wang, and Li Cheng. TM2T:
+Stochastic and tokenized modeling for the reciprocal gener-
+ation of 3d human motions and texts. In ECCV, 2022. 2
+[20] Chuan Guo, Yuxuan Mu, Muhammad Gohar Javed, Sen
+Wang, and Li Cheng. Momask: Generative masked mod-
+eling of 3d human motions. 2023. 2
+
+[21] Ikhsanul Habibie, Daniel Holden, Jonathan Schwarz, Joe
+Yearsley, and Taku Komura. A recurrent variational autoen-
+coder for human motion synthesis. In BMVC, 2017. 2
+[22] Mohamed Hassan, Duygu Ceylan, Ruben Villegas, Jun
+Saito, Jimei Yang, Yi Zhou, and Michael J Black. Stochastic
+scene-aware motion prediction. In ICCV, 2021. 2
+
+[23] Chengan He, Jun Saito, James Zachary, Holly Rushmeier,
+and Yi Zhou. Nemf: Neural motion fields for kinematic ani-
+mation. In NeurIPS, 2022. 2
+
+[24] Gustav Eje Henter, Simon Alexanderson, and Jonas Beskow.
+MoGlow: Probabilistic and controllable motion synthesis
+using normalising flows. ACM Transactions on Graphics
+(TOG), 2020. 2
+
+[25] Martin Heusel, Hubert Ramsauer, Thomas Unterthiner,
+Bernhard Nessler, and Sepp Hochreiter. Gans trained by a
+two time-scale update rule converge to a local nash equilib-
+rium. Advances in neural information processing systems,
+30, 2017. 13
+
+[26] Jonathan Ho, Ajay Jain, and Pieter Abbeel. Denoising dif-
+fusion probabilistic models. Advances in neural information
+processing systems, 33:6840–6851, 2020. 5
+
+[27] Chun-Hao P. Huang, Hongwei Yi, Markus H¨oschle, Matvey
+Safroshkin, Tsvetelina Alexiadis, Senya Polikovsky, Daniel
+Scharstein, and Michael J Black. Capturing and inferring
+dense full-body human-scene contact. In CVPR, 2022. 6, 7
+[28] Catalin Ionescu, Dragos Papava, Vlad Olaru, and Cristian
+Sminchisescu. Human3.6M: Large scale datasets and predic-
+tive methods for 3D human sensing in natural environments.
+TPAMI, 36(7):1325–1339, 2014. 6, 12
+
+9
+
+[29] Peng Jin, Yang Wu, Yanbo Fan, Zhongqian Sun, Yang Wei,
+and Li Yuan. Act as you wish: Fine-grained control of mo-
+tion diffusion model with hierarchical semantic graphs. In
+NeurIPs, 2023. 2
+
+[30] Angjoo Kanazawa, Michael J. Black, David W. Jacobs, and
+Jitendra Malik. End-to-end recovery of human shape and
+pose. In CVPR, 2018. 3
+
+[31] Manuel Kaufmann, Jie Song, Chen Guo, Kaiyue Shen, Tian-
+jian Jiang, Chengcheng Tang, Juan Jos´e Z´arate, and Otmar
+Hilliges. EMDB: The Electromagnetic Database of Global
+3D Human Pose and Shape in the Wild. In ICCV, 2023. 6, 7
+[32] Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Met-
+zger, Rodrigo Caye Daudt, and Konrad Schindler. Repurpos-
+ing diffusion-based image generators for monocular depth
+estimation. In CVPR, 2024. 14
+
+[33] Muhammed Kocabas, Nikos Athanasiou, and Michael J
+Black. VIBE: Video inference for human body pose and
+shape estimation. In CVPR, 2020. 3, 7, 13
+
+[34] Muhammed Kocabas, Chun-Hao P. Huang, Otmar Hilliges,
+and Michael J. Black. PARE: Part attention regressor for 3D
+human body estimation. In ICCV, 2021. 13
+
+[35] Muhammed Kocabas, Ye Yuan, Pavlo Molchanov, Yunrong
+Guo, Michael J. Black, Otmar Hilliges, Jan Kautz, and Umar
+Iqbal. PACE: Human and motion estimation from in-the-
+wild videos. In 3DV, 2024. 2, 3, 7
+
+[36] Hanyang Kong, Kehong Gong, Dongze Lian, Michael Bi Mi,
+and Xinchao Wang. Priority-centric human motion genera-
+tion in discrete latent space. In Proceedings of the IEEE/CVF
+International Conference on Computer Vision, pages 14806–
+14816, 2023. 7
+
+[37] Nilesh Kulkarni, Davis Rempe, Kyle Genova, Abhijit
+Kundu, Justin Johnson, David Fouhey, and Leonidas Guibas.
+NIFTY: Neural object interaction fields for guided human
+motion synthesis. arXiv:2307.07511, 2023. 2
+
+[38] Jiye Lee and Hanbyul Joo. Mocap everyone everywhere:
+Lightweight motion capture with smartwatches and a head-
+mounted camera. In Proceedings of the IEEE/CVF Confer-
+ence on Computer Vision and Pattern Recognition (CVPR),
+2024. 3
+
+[39] Jiefeng Li, Chao Xu, Zhicun Chen, Siyuan Bian, Lixin Yang,
+and Cewu Lu. Hybrik: A hybrid analytical-neural inverse
+kinematics solution for 3d human pose and shape estimation.
+In CVPR, 2021. 3, 7, 12, 13
+
+[40] Jiefeng Li, Siyuan Bian, Qi Liu, Jiasheng Tang, Fan Wang,
+and Cewu Lu. Niki: Neural inverse kinematics with invert-
+ible neural networks for 3d human pose and shape estima-
+tion. In Proceedings of the IEEE/CVF Conference on Com-
+puter Vision and Pattern Recognition, pages 12933–12942,
+2023. 6, 13
+
+[41] Jiefeng Li, Ye Yuan, Davis Rempe, Haotian Zhang, Pavlo
+Molchanov, Cewu Lu, Jan Kautz, and Umar Iqbal. Coin:
+Control-inpainting diffusion prior for human and camera
+In ECCV, pages 426–446. Springer,
+motion estimation.
+2024. 2, 3, 7
+
+[42] Ruilong Li, Shan Yang, David A Ross, and Angjoo
+Kanazawa. Ai choreographer: Music conditioned 3d dance
+generation with aist++. In ICCV, 2021. 2, 6, 7, 12, 13
+
+[43] Zhihao Li, Jianzhuang Liu, Zhensong Zhang, Songcen Xu,
+and Youliang Yan. Cliff: Carrying location information in
+full frames into human pose and shape estimation. In ECCV,
+2022. 7
+
+[44] Jing Lin, Ailing Zeng, Shunlin Lu, Yuanhao Cai, Ruimao
+Zhang, Haoqian Wang, and Lei Zhang. Motion-x: A large-
+scale 3d expressive whole-body human motion dataset.
+In
+NeurIPS, 2023. 2, 3, 6, 7, 12, 13
+
+[45] Matthew Loper, Naureen Mahmood, Javier Romero, Gerard
+Pons-Moll, and Michael J Black. Smpl: a skinned multi-
+person linear model. ACM Transactions on Graphics (TOG),
+34(6):1–16, 2015. 3
+
+[46] Ilya Loshchilov, Frank Hutter, et al. Fixing weight decay
+regularization in adam. arXiv preprint arXiv:1711.05101, 5,
+2017. 12
+
+[47] Mingshuang Luo, Ruibing Hou, Zhuo Li, Hong Chang, Zimo
+Liu, Yaowei Wang, and Shiguang Shan. M3gpt: An ad-
+vanced multimodal, multitask framework for motion com-
+prehension and generation. In NeurIPs, 2024. 3
+
+[48] Naureen Mahmood, Nima Ghorbani, Nikolaus F. Troje, Ger-
+ard Pons-Moll, and Michael J. Black. AMASS: Archive of
+motion capture as surface shapes. In ICCV, 2019. 3, 6, 12
+
+[49] Gonzalo Martin Garcia, Karim Abou Zeid, Christian
+Schmidt, Daan de Geus, Alexander Hermans, and Bastian
+Leibe. Fine-tuning image-conditional diffusion models is
+easier than you think. In WACV, 2025. 14
+
+[50] Meinard M¨uller, Tido R¨oder, and Michael Clausen. Efficient
+content-based retrieval of motion capture data. In ACM SIG-
+GRAPH 2005 Papers, pages 677–685. 2005. 13
+
+[51] Kensuke Onuma, Christos Faloutsos, and Jessica K Hodgins.
+Fmdistance: A fast and effective distance function for mo-
+tion capture data. Eurographics (Short Papers), 7(10), 2008.
+13
+
+[52] Mathis Petrovich, Or Litany, Umar Iqbal, Michael J. Black,
+G¨ul Varol, Xue Bin Peng, and Davis Rempe. Multi-track
+timeline control for text-driven 3d human motion generation.
+In CVPR Workshop on Human Motion Generation, 2024. 3
+[53] Ekkasit Pinyoanuntapong, Pu Wang, Minwoo Lee, and Chen
+Chen. Mmm: Generative masked motion model. In CVPR,
+2024. 2
+
+[54] Jose Luis Ponton, Haoran Yun, Andreas Aristidou, Carlos
+Andujar, and Nuria Pelechano. Sparseposer: Real-time full-
+body motion reconstruction from sparse data. ACM Trans-
+actions on Graphics, 2023. 3
+
+[55] Yijun Qian, Jack Urbanek, Alexander G. Hauptmann, and
+Jungdam Won. Breaking the limits of text-conditioned 3D
+In ICCV,
+motion synthesis with elaborative descriptions.
+2023. 3
+
+[56] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee,
+Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and
+Peter J. Liu. Exploring the limits of transfer learning with a
+unified text-to-text transformer. Journal of Machine Learn-
+ing Research, 21(140):1–67, 2020. 12
+
+[57] Davis Rempe, Tolga Birdal, Aaron Hertzmann, Jimei Yang,
+Srinath Sridhar, and Leonidas J. Guibas. Humor: 3d human
+motion model for robust pose estimation. In ICCV, 2021. 2,
+5
+
+10
+
+[58] Robin Rombach, Andreas Blattmann, Dominik Lorenz,
+Patrick Esser, and Bj¨orn Ommer. High-resolution image syn-
+thesis with latent diffusion models. In CVPR, 2022. 14
+[59] Istv´an S´ar´andi and Gerard Pons-Moll. Neural localizer fields
+for continuous 3d human pose and shape estimation. 2024.
+3
+
+[60] Zehong Shen, Huaijin Pi, Yan Xia, Zhi Cen, Sida Peng,
+Zechen Hu, Hujun Bao, Ruizhen Hu, and Xiaowei Zhou.
+World-grounded human motion recovery via gravity-view
+coordinates. In SIGGRAPH Asia 2024 Conference Papers,
+pages 1–11, 2024. 3, 7, 12
+
+[61] Soyong Shin, Juyong Kim, Eni Halilaj, and Michael J Black.
+Wham: Reconstructing world-grounded humans with accu-
+rate 3d motion. In CVPR, 2024. 3, 7, 12
+
+[62] Ayumi Shiobara and Makoto Murakami. Human motion gen-
+eration using wasserstein GAN. In International Conference
+on Digital Signal Processing (ICDSP), 2021. 2
+
+[63] Li Siyao, Weijiang Yu, Tianpei Gu, Chunze Lin, Quan Wang,
+Chen Qian, Chen Change Loy, and Ziwei Liu. Bailando:
+3d dance generation by actor-critic gpt with choreographic
+In Proceedings of the IEEE/CVF Conference on
+memory.
+Computer Vision and Pattern Recognition, pages 11050–
+11059, 2022. 2, 7, 13
+
+[64] Jiaming Song, Chenlin Meng, and Stefano Ermon. Denois-
+ing diffusion implicit models. In International Conference
+on Learning Representations, 2020. 8
+
+[65] Jianlin Su, Murtadha Ahmed, Yu Lu, Shengfeng Pan, Wen
+Bo, and Yunfeng Liu. Roformer: Enhanced transformer with
+rotary position embedding. Neurocomputing, 568:127063,
+2024. 4
+
+[66] Jiangxin Sun, Chunyu Wang, Huang Hu, Hanjiang Lai, Zhi
+Jin, and Jian-Fang Hu. You never stop dancing: Non-
+freezing dance generation via bank-constrained manifold
+projection. In NeurIPS, 2022. 2
+
+[67] Yu Sun, Qian Bao, Wu Liu, Tao Mei, and Michael J Black.
+Trace: 5d temporal regression of avatars with dynamic cam-
+eras in 3d environments. In CVPR, 2023. 7
+
+[68] Taoran Tang, Jia Jia, and Hanyang Mao. Dance with melody:
+An LSTM-autoencoder approach to music-oriented dance
+synthesis. In ACM International Conference on Multimedia
+(ACMMM), 2018. 2
+
+[69] Zachary Teed and Jia Deng. DROID-SLAM: Deep Vi-
+sual SLAM for Monocular, Stereo, and RGB-D Cameras.
+NeurIPs, 2021. 12
+
+[70] Guy Tevet, Sigal Raab, Brian Gordon, Yonatan Shafir,
+Daniel Cohen-Or, and Amit H Bermano. Human motion dif-
+fusion model. In ICLR, 2023. 2, 5, 6, 7, 8, 13
+
+[71] Jonathan Tseng, Rodrigo Castellon, and Karen Liu. Edge:
+In Proceedings of
+Editable dance generation from music.
+the IEEE/CVF Conference on Computer Vision and Pattern
+Recognition, pages 448–458, 2023. 2, 6, 7, 12, 13
+
+[72] Guillermo Valle-P´erez, Gustav Eje Henter, Jonas Beskow,
+Andr´e Holzapfel, Pierre-Yves Oudeyer, and Simon Alexan-
+derson. Transflower: probabilistic autoregressive dance gen-
+eration with multimodal attention. ACM Transactions on
+Graphics (TOG), 2021. 2
+
+[73] Timo von Marcard, Roberto Henschel, Michael Black, Bodo
+Rosenhahn, and Gerard Pons-Moll. Recovering accurate 3d
+human pose in the wild using imus and a moving camera. In
+ECCV, 2018. 6, 7, 12
+
+[74] Yufu Wang and Kostas Daniilidis. Refit: Recurrent fit-
+ting network for 3d human recovery. In Proceedings of the
+IEEE/CVF International Conference on Computer Vision,
+pages 14644–14654, 2023. 7
+
+[75] Yufu Wang, Ziyun Wang, Lingjie Liu, and Kostas Daniilidis.
+Tram: Global trajectory and motion of 3d humans from in-
+the-wild videos. In European Conference on Computer Vi-
+sion, pages 467–487. Springer, 2024. 3, 6, 7, 12
+
+[76] Zan Wang, Yixin Chen, Tengyu Liu, Yixin Zhu, Wei Liang,
+and Siyuan Huang. HUMANISE: Language-conditioned hu-
+man motion generation in 3d scenes. In Neural Information
+Processing Systems (NeurIPS), 2022. 3
+
+[77] Liang Xu, Ziyang Song, Dongliang Wang, Jing Su, Zhicheng
+Fang, Chenjing Ding, Weihao Gan, Yichao Yan, Xin Jin,
+Xiaokang Yang, Wenjun Zeng, and Wei Wu. ActFormer:
+A gan-based transformer towards general action-conditioned
+3d human motion generation. In ICCV, 2023. 2
+
+[78] Liang Xu, Shaoyang Hua, Zili Lin, Yifan Liu, Feipeng Ma,
+Yichao Yan, Xin Jin, Xiaokang Yang, and Wenjun Zeng. Mo-
+tionbank: A large-scale video motion benchmark with disen-
+tangled rule-based annotations, 2024. 3
+
+[79] Vickie Ye, Georgios Pavlakos, Jitendra Malik, and Angjoo
+Kanazawa. Decoupling human and camera motion from
+videos in the wild. In CVPR, 2023. 2, 3, 7
+
+[80] Hongwei Yi, Justus Thies, Michael J Black, Xue Bin Peng,
+and Davis Rempe. Generating human interaction motions in
+scenes with text control. In European Conference on Com-
+puter Vision, pages 246–263. Springer, 2024. 3
+
+[81] Xinyu Yi, Yuxiao Zhou, and Feng Xu. Transpose: Real-time
+3d human translation and pose estimation with six inertial
+sensors. ACM Transactions on Graphics, 2021. 3
+
+[82] Ye Yuan, Umar Iqbal, Pavlo Molchanov, Kris Kitani, and Jan
+Kautz. Glamr: Global occlusion-aware human mesh recov-
+ery with dynamic cameras. In CVPR, 2022. 3, 7
+
+[83] Mingyuan Zhang, Zhongang Cai, Liang Pan, Fangzhou
+Hong, Xinying Guo, Lei Yang, and Ziwei Liu. Motiondif-
+fuse: Text-driven human motion generation with diffusion
+model. arXiv preprint arXiv:2208.15001, 2022. 2
+
+[84] Mingyuan Zhang, Xinying Guo, Liang Pan, Zhongang Cai,
+Fangzhou Hong, Huirong Li, Lei Yang, and Ziwei Liu. Re-
+modiffuse: Retrieval-augmented motion diffusion model. In
+arXiv preprint arXiv:2304.01116, 2023. 2
+
+[85] Mingyuan Zhang, Daisheng Jin, Chenyang Gu, Fangzhou
+Hong, Zhongang Cai, Jingfang Huang, Chongzhi Zhang,
+Xinying Guo, Lei Yang, Ying He, et al. Large motion model
+for unified multi-modal motion generation. In ECCV, 2024.
+3
+
+[86] Qinsheng Zhang, Jiaming Song, Xun Huang, Yongxin Chen,
+and Ming yu Liu. Diffcollage: Parallel generation of large
+content with diffusion models. In CVPR, 2023. 3
+
+[87] Siwei Zhang, Bharat Lal Bhatnagar, Yuanlu Xu, Alexan-
+der Winkler, Petr Kadlecek, Siyu Tang, and Federica Bogo.
+Rohm: Robust human motion reconstruction via diffusion.
+In CVPR, 2024. 3
+
+11
+
+[88] Xiaohan Zhang, Bharat Lal Bhatnagar, Sebastian Starke,
+Ilya A. Petrov, Vladimir Guzov, Helisa Dhamo, Eduardo
+P´erez Pellitero, and Gerard Pons-Moll. Force: Dataset and
+method for intuitive physics guided human-object interac-
+tion. In International Conference on 3D Vision (3DV), 2025.
+3
+
+[89] Wenyang Zhou, Zhiyang Dou, Zeyu Cao, Zhouyingcheng
+Liao, Jingbo Wang, Wenjia Wang, Yuan Liu, Taku Komura,
+Wenping Wang, and Lingjie Liu. Emdm: Efficient motion
+diffusion model for fast and high-quality motion generation.
+In European Conference on Computer Vision, pages 18–38.
+Springer, 2024. 7
+
+[90] Zixiang Zhou and Baoyuan Wang. Ude: A unified driving
+engine for human motion generation. In CVPR, 2023. 3
+[91] Lingting Zhu, Xian Liu, Xuanyu Liu, Rui Qian, Ziwei Liu,
+and Lequan Yu. Taming diffusion models for audio-driven
+co-speech gesture generation. In CVPR, 2023. 2
+
+[92] Wentao Zhu, Xiaoxuan Ma, Dongwoo Ro, Hai Ci, Jinlu
+Zhang, Jiaxin Shi, Feng Gao, Qi Tian, and Yizhou Wang.
+Human motion generation: A survey. TPAMI, 2023. 2
+
+A. Implementation Details
+
+Model Architecture. GENMO comprises 16 layers, each
+consisting of a ROPE-based Transformer block followed by
+a multi-text injection block. The ROPE-based Transformer
+block incorporates a LayerNorm, a ROPE attention layer
+with residual connections, and an MLP layer. Each atten-
+tion unit features 8 attention heads to capture diverse mo-
+tion patterns. The number of neurons in the MLP layer is
+dmlp = 1024. The multi-text injection block maintains a
+similar architecture to the ROPE-based Transformer block,
+but replaces the standard attention with multi-text attention,
+which processes text embedding sequences to enrich and
+update the motion feature representations. The maximum
+self-attention window size is W = 120.
+
+Training Datasets. GENMO is trained from scratch
+on a diverse set of mixed motion datasets,
+includ-
+ing motion estimation datasets AMASS [48], BED-
+LAM [5], Human3.6M [28], 3DPW [73], music-to-
+dance dataset AIST++[42], and text-to-motion datasets Hu-
+manML3D [17] and Motion-X [44]. Since motion data in
+HumanML3D are represented in their own format, we con-
+vert them to SMPL parameters with inverse kinematics [39]
+for training. For AMASS data lacking video, music, or text
+inputs, we follow [60, 61] to simulate static and dynamic
+camera trajectories and project 3D motions to 2D keypoints
+as input conditions. The simulated camera trajectories are
+also used as input conditions during training. Although
+AMASS and HumanML3D share some motion sequences,
+we treat them as independent datasets.
+
+For Motion-X, we only utilize its 2D keypoints and text
+descriptions due to noisy 3D ground truth. When train-
+ing with BEDLAM and Human3.6M datasets, we use video
+
+frames and 2D keypoints as conditioning inputs, with global
+3D motions serving as target outputs. For the 3DPW
+dataset, video frames and 2D keypoints are used as con-
+ditions; however, since 3DPW provides only local 3D mo-
+tions, we implement a strategy analogous to Lgen-2D: we
+first generate pseudo-clean global human trajectories from
+the estimation mode, then utilize these to produce noisy mo-
+tions for training the generation mode, with loss computa-
+tion restricted to local poses. For AIST++, training incor-
+porates video frames, 2D keypoints, and music as condi-
+tions. Regarding the camera condition, we utilize ground-
+truth camera trajectories as the input condition for datasets
+that either provide such trajectories or feature static cam-
+eras; for datasets lacking labeled camera trajectories, we
+employ DROID-SLAM [69] to generate camera trajecto-
+ries as input conditions during training. We train a single
+unified model on this comprehensive collection of datasets,
+enabling evaluation across diverse motion-related tasks.
+
+Condition Processing. For video conditions, we employ
+a frozen encoder from TRAM [75], whereas for AMASS
+data lacking video inputs, we utilize zero vectors as place-
+holders. The 2D keypoint conditions undergo normaliza-
+tion to the range [−1, 1] based on their bounding boxes,
+which are further normalized by the focal length of their
+corresponding video conditions. For music processing, we
+extract features using the music encoder from EDGE [71],
+while camera parameters are formulated as the camera-to-
+world transformation and derived from input videos via
+DROID-SLAM [69]. Textual descriptions are encoded
+through the T5 encoder architecture [56].
+
+Training Details. During training, we employ data aug-
+mentation techniques on the 2D keypoints, including ran-
+dom masking and Gaussian noise perturbation to enhance
+model robustness. To further improve model robustness, we
+implement random masking of input conditions through-
+out the training process. We configure the sequence length
+to N = 120 for training, while maintaining support for
+variable sequence lengths during inference. The model is
+trained from scratch for 500 epochs using the AdamW op-
+timizer [46], with a mini-batch size of 128 per GPU dis-
+tributed across 2 A100 GPUs.
+
+B. Evaluation Settings for Music-to-Dance
+
+Generation
+
+We evaluate the music-to-dance generation capabilities of
+GENMO on the AIST++ [42] dataset. The same one-in-all
+checkpoint is employed for evaluation as used in all other
+tasks. Following established protocols [42, 71], our evalu-
+ation encompasses four key aspects: motion quality, gener-
+
+12
+
+ation diversity, physical plausibility, and motion-music cor-
+relation.
+
+For motion quality and generation diversity assessment,
+we compute the Fr´echet Inception Distance (FID) [25] and
+the average feature distance of generated motions using
+both kinetic features [51] (denoted as “k”) and geomet-
+ric features [50] (denoted as “g”) in accordance with Li et
+al. [42].
+
+To evaluate physical plausibility, we employ two
+metrics: Mean Per Joint Position Error (MPJPE) and
+Procrustes-aligned MPJPE (PA-MPJPE). Additionally, we
+calculate the Physical Foot Contact score (PFC) as proposed
+by Tseng et al. [71].
+
+For quantifying motion-music correlation, we utilize the
+Beat Alignment Score (BAS) following the methodology
+of Li et al. [63]. This metric effectively measures the syn-
+chronization between musical beats and motion transitions
+by calculating the average temporal distance between each
+kinematic beat and its nearest musical beat.
+
+C. Evaluation Settings for Text-to-Motion
+
+Generation
+
+evaluating
+
+generation
+
+text-to-motion
+
+For
+on Hu-
+manML3D [17], we utilize the pre-trained text and
+motion encoders from [17] after converting our motion
+representation to the HumanML3D format. This conversion
+process involves first recovering the SMPL parameters
+from our raw representation and subsequently deriving the
+HumanML3D-format representation as described in [17],
+employing the neutral gender SMPL model. Consistent
+with established evaluation protocols, we report the vari-
+ance across five different inference trials on HumanML3D.
+The same one-in-all checkpoint is employed for evaluation
+as used in all other tasks.
+
+It is important to note that the conversion from SMPL to
+HumanML3D format introduces some degradation in mo-
+tion quality, as the predicted SMPL bone lengths do not
+precisely match the HumanML3D skeleton, resulting in ar-
+tifacts such as foot skating. To address this limitation and
+provide a more comprehensive evaluation, we additionally
+report the Fr´echet Inception Distance (FID) and Diversity
+metrics using both kinetic features [51] (denoted as “k”)
+and geometric features [50] (denoted as “g”) based on 24
+keypoints. Since the SMPL model and the HumanML3D
+skeleton share an identical joint order, this approach enables
+direct comparison of GENMO’s motion quality with state-
+of-the-art methods using keypoint-based metrics.
+
+For the evaluation on Motion-X [44], we implemented
+our own text and motion encoders, as the original encoders
+were provided by [44] and their implementation details
+were not disclosed in the literature. Unlike HumanML3D,
+Motion-X text prompts lack frame-based keywords, neces-
+sitating a different approach to text encoding. We employed
+
+13
+
+Table 9. Benchmark of Human Motion Generation. Motion
+quality is evaluated on the 3DPW-XOCC [40] dataset.
+
+Methods
+
+MPJPE ↑ PA-MPJPE ↓ PVE ↓ ACCEL →
+
+HybrIK [39]
+PARE [34]
+PARE [34] + VIBE [33]
+NIKI (frame-based) [40]
+NIKI (temporal) [40]
+
+Ours (Regression-only)
+Ours
+
+148.3
+114.2
+97.3
+110.7
+88.9
+
+89.0
+76.2
+
+98.7
+67.7
+60.2
+60.5
+52.1
+
+50.2
+48.4
+
+164.5
+133.0
+114.9
+128.6
+98.0
+
+103.8
+94.2
+
+108.6
+90.7
+18.3
+74.4
+17.3
+
+21.1
+17.1
+
+a pre-trained CLIP language model with its corresponding
+tokenizer to process the raw text prompts, generating em-
+beddings with a dimension of 512, consistent with the rep-
+resentation used in [17]. The same one-in-all checkpoint is
+employed for evaluation as used in all other tasks. For eval-
+uation purposes on the Motion-X dataset, we utilized these
+trained encoders with frozen weights to ensure consistent
+and comparable feature extraction across all test samples.
+
+D. Evaluation Settings
+
+for Motion In-
+
+betweening
+
+For motion in-betweening evaluation, we adopt the method-
+ology established in prior diffusion-based approaches [70],
+wherein the noisy motion is overwritten with desired poses
+at specified keyframes prior to each denoising step. The
+same one-in-all checkpoint is employed for evaluation as
+used in all other tasks. Due to the constraints of our fea-
+ture representation, which lacks global root information, we
+only overwrite the local body poses and global root ori-
+entation for the keyframes. We evaluate our approach on
+both the HumanML3D and Motion-X test sets under two
+experimental conditions: sampling either 2 or 5 keyframes
+from each test motion. For Motion-X, we utilize the recon-
+structed 3D motion as described in [44]. Additionally, we
+incorporate textual descriptions from these datasets as con-
+ditioning input. To account for the generative diversity of
+our model, we sample N = 10 different initial noise vec-
+tors for each test motion and execute the diffusion process
+with 50 denoising steps. For evaluation metrics, we report
+the minimum values among these diverse samples, which
+effectively captures the best performance achievable by our
+generative approach.
+
+E. Evaluation on Occlusion-Specific Bench-
+
+mark
+
+To evaluate the efficacy of generative priors in enhanc-
+ing motion estimation robustness, we conducted compre-
+hensive experiments on the 3DPW-XOCC benchmark [40].
+This benchmark specifically evaluates 3D human pose esti-
+
+mation under challenging conditions of extreme occlusion
+and truncation, simulated through strategic placement of
+random occlusion patches and frame truncations. As evi-
+denced in Table 9, GENMO demonstrates superior perfor-
+mance compared to state-of-the-art human motion estima-
+tion methods, including those explicitly designed to handle
+occlusions. Notably, our ablation study reveals that a vari-
+ant of our model trained without generative tasks exhibits
+worse performance compared to the complete GENMO
+model. These findings substantiate that the generative pri-
+ors incorporated within GENMO significantly enhance the
+plausibility and accuracy of estimated human motions un-
+der visually challenging scenarios, thereby underscoring the
+practical utility of our approach in real-world applications
+where occlusions frequently occur.
+
+F. Additional Related Work
+
+F.1. Generative Priors for Estimation
+
+Recent advances in computer vision have demonstrated the
+efficacy of leveraging generative priors from large-scale im-
+age models, such as StableDiffusion [58], for various esti-
+mation tasks. These approaches fine-tune diffusion-based
+generative models to predict geometric and semantic prop-
+erties, including depth maps, surface normals, and seman-
+tic segmentation [13, 32, 49]. By repurposing the rich la-
+tent representations encoded in pre-trained generative mod-
+els, these methods achieve substantial improvements in esti-
+mation accuracy across diverse visual understanding tasks.
+Nevertheless, a significant limitation of these approaches is
+their tendency to sacrifice the inherent generative capabili-
+ties of the original models, as they predominantly focus on
+deterministic estimation outcomes rather than maintaining
+the ability to produce diverse outputs.
+
+Our work fundamentally diverges from these approaches
+by introducing a unified framework that seamlessly inte-
+grates motion generation and estimation within a single co-
+herent model.
+In contrast to previous methods that com-
+promise generative capabilities during the fine-tuning pro-
+cess, our framework maintains both the stochastic diversity
+essential for high-quality generation and the deterministic
+precision required for accurate estimation. This dual ca-
+pability represents a significant advancement in leveraging
+generative priors for human motion understanding.
