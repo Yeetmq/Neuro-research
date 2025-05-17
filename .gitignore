@@ -11,6 +11,7 @@ processed_chunks_train/
 __pycache__/
 converted_data/
 bart-finetuned/
+final_model/
 
 # Исключения из ветки main
 # BART/
