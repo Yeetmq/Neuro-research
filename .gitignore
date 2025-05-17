@@ -15,4 +15,4 @@ home/debian/develop/denis/Neuro-research/models/final_model/
 # Исключения из ветки main
 # BART/
 data_no/
-article_parsing/
+article_parsing/models/final_model/
