@@ -11,8 +11,9 @@ processed_chunks_train/
 __pycache__/
 converted_data/
 bart-finetuned/
-home/debian/develop/denis/Neuro-research/models/final_model/
+final_model/
 # Исключения из ветки main
 # BART/
 data_no/
 article_parsing/models/final_model/
+torch-2.7.0+cu118-cp310-cp310-win_amd64.whl

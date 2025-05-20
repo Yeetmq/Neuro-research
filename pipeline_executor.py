@@ -14,6 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from summarization_parser.cli.main import main as run_parser
 from models.base import SummarizationPipeline, load_config, load_text, save_text
 from summarization_parser.cli.main import main as parser_main
+from summarization_parser.core.parse import SummarizationParser
 
 
 logging.basicConfig(
@@ -46,11 +47,14 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     sample_agrs_list = [
         '--query', query,
         '--config', config_path,
-        '--translate', 'true' if 'translate' in config else 'false'
+        '--translate', 'false'
     ]
     
     args = parser_args.parse_args(sample_agrs_list)
+
+    logger.info(f"Загрузка кфг")
     config = load_config(args.config)
+    logger.info(f"кфг загрузили")
     config['query'] = args.query
     config['translate'] = args.translate
     
@@ -129,9 +133,9 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
 
 if __name__ == "__main__":
     QUERY = "Transformers in machine learning"
-    CONFIG_PATH = "/home/debian/develop/denis/Neuro-research/summarization_parser/config/settings.yaml"
+    CONFIG_PATH = r"summarization_parser\config\settings.yaml"
     MODEL_CONFIG_PATH = "/models/config/model_cfg.yaml"
-    DATA_DIR = "/data"
+    DATA_DIR = r"summarization_parser\data"
     
     try:
         logger.info("Запуск полного пайплайна: парсинг -> суммаризация -> отчет")
@@ -152,7 +156,9 @@ if __name__ == "__main__":
             config_path=CONFIG_PATH,
             data_dir=DATA_DIR
         )
-        
+        logger.info("Запуск произошел")
+
+
         logger.info(f"Исходная длина: {full_results['original_length']} слов")
         logger.info(f"Найдено источников: {full_results['source_count']}")
         logger.info(f"Длина отчета: {full_results['summary_length']} слов")

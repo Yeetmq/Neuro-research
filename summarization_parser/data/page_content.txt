@@ -6,7 +6,7 @@ The transformer model is a type of neural network architecture that excels at pr
 
 ==================================================
 
-First-Order Logic in Artificial Intelligence First-order logic (FOL) is also known as predicate logic. It is a foundational framework used in mathematics, philosophy, linguistics, and computer science. In artificial intelligence (AI), FOL is important for knowledge representation, automated reasoning, and NLP. FOL extends propositional logic b
+First-Order Logic in Artificial Intelligence First-order logic (FOL) is also known as predicate logic. It is a foundational framework used in mathematics, philosophy, linguistics, and computer science. In artificial intelligence (AI), FOL is important for knowledge representation, automated reasoning, and NLP.FOL extends propositional logic by
 
 ==================================================
 

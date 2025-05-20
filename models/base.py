@@ -12,8 +12,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-from bart import BartSummarizer
-from llm import ReportGenerator
+from models.bart import BartSummarizer
+from models.llm import ReportGenerator
 
 def load_config(path: str) -> Dict:
     """Загрузка конфигурации из YAML"""

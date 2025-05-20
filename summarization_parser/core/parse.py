@@ -2,7 +2,7 @@ from core.web_parsing import WebHandler
 from core.pdf_handler import PDFHandler
 from core.arxiv_api import ArxivAPI
 from core.translation import TranslationClient
-from core.utils import save_to_file, logger, save_wiki_to_file
+from core.utils import save_to_file, logger, save_wiki_to_file, clear_and_save_to_file, clear_file
 
 
 class SummarizationParser:
@@ -34,9 +34,12 @@ class SummarizationParser:
                 logger.info(f"Translated query: {translated_query}")
         
         self.config['query'] = translated_query
-        
+
+        clear_file(self.config['result_path'])
+        clear_file(self.config['links_path'])
+
         site_links = self.web_handler.find_sites(self.config['query'])
-        save_to_file(site_links, self.config['links_path'])
+        clear_and_save_to_file(site_links, self.config['links_path'])
         
         video_links, webpage_links = self.web_handler.classify_links(self.config['links_path'])
         self.web_handler.parse_all_links(links=webpage_links, result_path=self.config['result_path'])
