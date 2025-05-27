@@ -1,8 +1,8 @@
-links_path: "summarization_parser/data/sites.txt"
-result_path: "summarization_parser/data/page_content.txt"
+links_path: "/home/debian/develop/denis/Neuro-research/summarization_parser/data/sites.txt"
+result_path: "/home/debian/develop/denis/Neuro-research/summarization_parser/data/page_content.txt"
 max_results: 1
 timeout: 10
 query: ''
 translate: false
-path_to_bart_model: "final_model"
+path_to_bart_model: "/home/debian/develop/denis/final_model"
 llm_model_name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"

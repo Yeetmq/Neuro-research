@@ -1,0 +1,10 @@
+data_dir: /app/summarization_parser/data
+result_path: /app/summarization_parser/data/page_content.txt
+links_path: "/app/summarization_parser/data/sites.txt"
+config_path: /app/cfg.yaml
+path_to_bart_model: /app/final_model
+max_results: 1
+timeout: 10
+query: ''
+translate: true
+llm_model_name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"

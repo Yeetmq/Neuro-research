@@ -1,20 +1,20 @@
-https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)
+/search?num=12
 
-https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04
+https://www.quantum.com/
 
-https://blogs.nvidia.com/blog/what-is-a-transformer-model/
+https://en.wikipedia.org/wiki/Quantum
 
-https://www.ibm.com/think/topics/transformer-model
+https://www.quantum.com/ru/
 
-https://www.datacamp.com/tutorial/how-transformers-work
+https://en.wikipedia.org/wiki/Quantum_computing
 
-https://www.geeksforgeeks.org/getting-started-with-transformers/
+https://www.merriam-webster.com/dictionary/quantum
 
-https://www.reddit.com/r/explainlikeimfive/comments/16y59y3/eli5_what_are_transformers_in_ml/
+https://quantum-journal.org/
 
-https://aws.amazon.com/what-is/transformers-in-artificial-intelligence/
+https://www.ibm.com/think/topics/quantum-computing
 
-https://web.stanford.edu/~jurafsky/slp3/9.pdf
+https://quantumai.google/
 
-https://www.youtube.com/watch?v=ZXiruGOCn9s
+https://digital-strategy.ec.europa.eu/en/policies/quantum
 

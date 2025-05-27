@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты обработки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .result-section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            overflow-x: auto; /* Для горизонтального скролла */
+        }
+        pre {
+            white-space: pre-wrap; /* Сохраняет переносы и отступы */
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Результаты обработки запроса</h1>
+
+    <div class="result-section">
+        <div class="structured-report">
+            <h3>Структурированный отчет:</h3>
+            <pre>{{ results.structured_report }}</pre>
+        </div>
+    </div>
+
+    <a href="https://192.168.202.60:9001/proxy/8001/">Назад</a>
+</body>
+</html>

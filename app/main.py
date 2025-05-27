@@ -2,6 +2,8 @@ from fastapi import FastAPI, Depends, HTTPException, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
+
 from pathlib import Path
 import uvicorn
 import yaml
@@ -19,12 +21,26 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Neuro-Research Pipeline", version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 
 def load_config():
-    with open("cfg.yaml", "r") as f:
-        return yaml.safe_load(f)
+    config_path = os.getenv("CONFIG_PATH", "/app/cfg.yaml")
+    try:
+        with open(config_path, "r") as f:
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        logging.error(f"Файл конфигурации не найден по пути: {config_path}")
+        raise
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
@@ -48,10 +64,12 @@ async def run_pipeline(
             max_retries=max_retries,
             delay=delay
         )
-        return {
-            "status": "success",
+        return templates.TemplateResponse(
+        "results.html", 
+        {
+            "request": request,
             "results": results
-        }
+        })
     except Exception as e:
         logger.error(f"Ошибка выполнения пайплайна: {e}")
         raise HTTPException(status_code=500, detail=str(e))

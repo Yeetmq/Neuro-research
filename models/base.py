@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 from models.bart import BartSummarizer
 from models.llm import ReportGenerator
+from core.translation import TranslationClient
 
 def load_config(path: str) -> Dict:
     """Загрузка конфигурации из YAML"""
@@ -46,24 +47,25 @@ class SummarizationPipeline:
                  llama_model_path: str):
         self.summarizer = BartSummarizer(model_path=bart_model_path)
         self.generator = ReportGenerator(model_name=llama_model_path)
+        self.translator = TranslationClient()
     
     def run(self, input_text: str) -> Dict[str, Any]:
         """Выполняет полный пайплайн обработки текста"""
         results = {
             "original_length": len(input_text.split()),
             "summaries": [],
-            "structured_report": ""
+            "structured_report": "",
+            "original_report": ""
         }
         
-        cleaned_text = input_text
-        
         logger.info("Запуск рекурсивной суммаризации")
-        summaries = self.summarizer.summarize(cleaned_text)
+        summaries = self.summarizer.summarize(input_text)
         results["summaries"] = summaries
         
         logger.info("Генерация структурированного отчета")
         structured_report = self.generator.generate(summaries)
-        results["structured_report"] = structured_report
+        results["original_report"] = structured_report
+        results["structured_report"] = self.translator.translate(structured_report, source_lang="en", target_lang="ru")
         
         return results
 

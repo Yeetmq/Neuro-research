@@ -46,7 +46,7 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     
     sample_agrs_list = [
         '--query', query,
-        '--config', config_path,
+        '--config', os.getenv("CONFIG_PATH", "/app/cfg.yaml"),
         '--translate', 'false'
     ]
     
@@ -57,10 +57,10 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     logger.info(f"кфг загрузили")
     config['query'] = args.query
     config['translate'] = args.translate
-    
+    logger.info(f"парсер")
     parser = SummarizationParser(config)
     parser.run()
-    
+    logger.info(f"парсер закончил")
     input_file = Path(data_dir) / "page_content.txt"
     
     logger.info(f"Ожидание сохранения данных в {input_file}")
@@ -101,7 +101,7 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
         save_text("\n\n".join(results["summaries"]), str(summary_file))
     else:
         logger.warning("Суммаризация не вернула результатов")
-        
+
     if results["structured_report"]:
         logger.info(f"Сохранение отчета в {report_file}")
         save_text(results["structured_report"], str(report_file))
@@ -117,7 +117,11 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
             print(f"{i}. {summary}")
     else:
         print("Не выполнено")
-            
+    
+    print("\n" + "="*80)
+    print("Структурированный отчет на английском:")
+    print("-"*80)
+    print(results["original_report" or "Не сгенерирован"])
     print("\n" + "="*80)
     print("Структурированный отчет:")
     print("-"*80)
@@ -132,10 +136,10 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     }
 
 if __name__ == "__main__":
-    QUERY = "Transformers in machine learning"
-    CONFIG_PATH = r"summarization_parser\config\settings.yaml"
+    QUERY = "Algorithms for beginers"
+    CONFIG_PATH = '/home/debian/develop/denis/Neuro-research/summarization_parser/config/settings.yaml'
     MODEL_CONFIG_PATH = "/models/config/model_cfg.yaml"
-    DATA_DIR = r"summarization_parser\data"
+    DATA_DIR = "/home/debian/develop/denis/Neuro-research/summarization_parser/data"
     
     try:
         logger.info("Запуск полного пайплайна: парсинг -> суммаризация -> отчет")

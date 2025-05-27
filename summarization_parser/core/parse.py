@@ -11,8 +11,8 @@ class SummarizationParser:
         self.web_handler = WebHandler()
         self.pdf_handler = PDFHandler()
         self.arxiv_api = ArxivAPI()
-        # self.translate = config.get('translate', False)
-        self.translate = None
+        self.translate = config.get('translate', False)
+        # self.translate = None
         self.translation_client = TranslationClient() if self.translate else None
         
     def run(self):
@@ -21,12 +21,11 @@ class SummarizationParser:
         
         if self.translate and self.translation_client:
             logger.info("Translating query from Russian to English...")
-            translated_query = self.translation_client.translate_text(
+            translated_query = self.translation_client.translate(
                 original_query, 
-                source_lang='auto', 
+                source_lang='ru', 
                 target_lang='en'
             )
-            logger.info(f"Translated query = {translated_query}")
             if not translated_query:
                 logger.warning("Query translation failed, using original query")
                 translated_query = original_query
@@ -34,27 +33,27 @@ class SummarizationParser:
                 logger.info(f"Translated query: {translated_query}")
         
         self.config['query'] = translated_query
-
+        logger.info(f"до очищения")
+        logger.info(self.config)
         clear_file(self.config['result_path'])
         clear_file(self.config['links_path'])
-
+        logger.info(f"после")
         site_links = self.web_handler.find_sites(self.config['query'])
         clear_and_save_to_file(site_links, self.config['links_path'])
         
         video_links, webpage_links = self.web_handler.classify_links(self.config['links_path'])
         self.web_handler.parse_all_links(links=webpage_links, result_path=self.config['result_path'])
         
-        if self.translate and self.translation_client:
-            self.translation_client.translate_file_in_parts(self.config['result_path'])
-
         # arxiv_texts = ''
         # arxiv_texts = self._process_arxiv_articles()
         wiki = self.web_handler.wiki_search(self.config['query'])
 
         # if wiki is not None:
         #     arxiv_texts += wiki
-        
-        save_wiki_to_file(wiki, self.config['result_path'])
+        if wiki is not None:
+            save_wiki_to_file(wiki, self.config['result_path'])
+        else:
+            logger.warning("Вики-статья не найдена для запроса: %s", self.config['query'])
 
         
         
