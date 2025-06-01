@@ -5,8 +5,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-docker run --gpus all -d --rm \
+docker run --gpus all --rm --env-file .env \
   -p 8001:8001 \
+  -v /home/debian/.cache/huggingface/hub:/app/huggingface_cache \
   -v ./models:/app/models \
   -v ./data:/app/data \
   -v ./summarization_parser:/app/summarization_parser \

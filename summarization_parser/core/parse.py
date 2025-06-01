@@ -38,7 +38,7 @@ class SummarizationParser:
         clear_file(self.config['result_path'])
         clear_file(self.config['links_path'])
         logger.info(f"после")
-        site_links = self.web_handler.find_sites(self.config['query'])
+        site_links = self.web_handler.find_sites(self.config['query'], self.config['links_num'])
         clear_and_save_to_file(site_links, self.config['links_path'])
         
         video_links, webpage_links = self.web_handler.classify_links(self.config['links_path'])

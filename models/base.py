@@ -43,10 +43,12 @@ def save_text(text: str, file_path: str) -> None:
 class SummarizationPipeline:
     
     def __init__(self, 
-                 bart_model_path: str,
-                 llama_model_path: str):
-        self.summarizer = BartSummarizer(model_path=bart_model_path)
-        self.generator = ReportGenerator(model_name=llama_model_path)
+                 bart_model_path,
+                 llm_model_path,
+                 query: str):
+        self.summarizer = bart_model_path
+        self.generator = llm_model_path
+        self.query = query
         self.translator = TranslationClient()
     
     def run(self, input_text: str) -> Dict[str, Any]:
@@ -63,7 +65,7 @@ class SummarizationPipeline:
         results["summaries"] = summaries
         
         logger.info("Генерация структурированного отчета")
-        structured_report = self.generator.generate(summaries)
+        structured_report = self.generator.generate(summaries, self.query)
         results["original_report"] = structured_report
         results["structured_report"] = self.translator.translate(structured_report, source_lang="en", target_lang="ru")
         

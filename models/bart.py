@@ -81,7 +81,7 @@ class BartSummarizer:
 
         logger.info(f"Исходный текст до суммаризации: {input_data}")
         
-        while (current_length > 1024 and iterations < max_iterations) or iterations == 0 :
+        while (current_length > 3000 and iterations < max_iterations) or iterations == 0 :
             logger.info(f"Итерация {iterations+1}: Текст слишком длинный ({current_length} слов). Выполняем повторную суммаризацию...")
             
             if isinstance(current_text, str):

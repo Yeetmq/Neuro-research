@@ -1,20 +1,10 @@
-/search?num=12
-
-https://www.quantum.com/
-
-https://en.wikipedia.org/wiki/Quantum
-
-https://www.quantum.com/ru/
-
 https://en.wikipedia.org/wiki/Quantum_computing
 
-https://www.merriam-webster.com/dictionary/quantum
-
-https://quantum-journal.org/
+https://quantumai.google/discover/whatisqc
 
 https://www.ibm.com/think/topics/quantum-computing
 
-https://quantumai.google/
+https://www.technologyreview.com/2019/01/29/66141/what-is-quantum-computing/
 
-https://digital-strategy.ec.europa.eu/en/policies/quantum
+https://aws.amazon.com/what-is/quantum-computing/
 

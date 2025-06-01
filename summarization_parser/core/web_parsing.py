@@ -4,9 +4,9 @@ from web_parsing.links_search import get_yandex_results, get_google_results
 from web_parsing.parser import classify_links, parse_all_pages, wiki_search, parse_all_links
 
 class WebHandler:
-    def find_sites(self, query: str) -> List[str]:
+    def find_sites(self, query: str, links_num: int) -> List[str]:
         logger.info(f"Searching sites for query: {query}")
-        return get_google_results(query)
+        return get_google_results(query, links_num)
         
     def classify_links(self, path: str) -> Tuple[List[str], List[str]]:
         return classify_links(path)

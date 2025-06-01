@@ -11,7 +11,7 @@ import time
 from googlesearch import search
 
 
-def get_google_results(query, num_results=10):
+def get_google_results(query, num_results):
 
     results = list(
         search(

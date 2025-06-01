@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: int = 3, delay: int = 5):
+def execute_pipeline(summarizer, generator, query: str, config_path: str, data_dir: str, max_retries: int = 3, delay: int = 5, links_num: int = 5):
     """
     Полный пайплайн: парсинг -> суммаризация -> генерация отчета
     
@@ -55,6 +55,7 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     logger.info(f"Загрузка кфг")
     config = load_config(args.config)
     logger.info(f"кфг загрузили")
+    config['links_num'] = links_num
     config['query'] = args.query
     config['translate'] = args.translate
     logger.info(f"парсер")
@@ -86,8 +87,9 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     # model_config = load_config(config["model_config_path"])
     
     pipeline = SummarizationPipeline(
-        bart_model_path=config['path_to_bart_model'],
-        llama_model_path=config['llm_model_name']
+        bart_model_path=summarizer,
+        llm_model_path=generator,
+        query=config['query']
     )
     
     logger.info("Запуск пайплайна суммаризации")
@@ -103,6 +105,7 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
         logger.warning("Суммаризация не вернула результатов")
 
     if results["structured_report"]:
+        logger.info(results["structured_report"])
         logger.info(f"Сохранение отчета в {report_file}")
         save_text(results["structured_report"], str(report_file))
     else:
@@ -130,9 +133,8 @@ def execute_pipeline(query: str, config_path: str, data_dir: str, max_retries: i
     return {
         "original_length": results["original_length"],
         "summaries": results["summaries"],
+        "original_report": results["original_report"],
         "structured_report": results["structured_report"],
-        "source_count": len(parser.sources) if hasattr(parser, 'sources') else 0,
-        "summary_length": len(results["structured_report"].split()) if results["structured_report"] else 0
     }
 
 if __name__ == "__main__":

@@ -1,93 +1,120 @@
-import transformers
-from transformers import MarianTokenizer, MarianMTModel
-from typing import List, Optional
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 import logging
-import gc
-import re
+from typing import List, Optional
 
+logger = logging.getLogger(__name__)
 
 class TranslationClient:
-    def __init__(self, base_url: str = "0.0.0.0:5000"):
-        self.base_url = f"{base_url}/translate"
+    def __init__(self, model_name: str = "facebook/nllb-200-distilled-1.3B"):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.tokenizer = None
-        self.model = None
-
-    def _load_model(self, source_lang: str, target_lang: str):
-        """Загружает модель в зависимости от языков"""
-        model_map = {
-            ("ru", "en"): "Helsinki-NLP/opus-mt-ru-en",
-            ("en", "ru"): "Helsinki-NLP/opus-mt-en-ru"
+        self.model, self.tokenizer = self._load_model(model_name)
+        
+        # Языковые коды для NLLB
+        self.language_codes = {
+            "ru": "rus_Cyrl",  # Русский
+            "en": "eng_Latn",  # Английский
+            "russian": "rus_Cyrl",
+            "english": "eng_Latn"
         }
-        model_name = model_map.get((source_lang, target_lang))
-        
-        if not model_name:
-            raise ValueError(f"Модель для перевода с {source_lang} на {target_lang} не найдена")
-        
-        self.tokenizer = MarianTokenizer.from_pretrained(model_name)
-        self.model = MarianMTModel.from_pretrained(model_name).to(self.device)
-    
-    def translate(self, text: str, source_lang: str = "auto", target_lang: str = "en") -> str:
-        """Переводит текст между русским и английским"""
-        if source_lang == "auto":
-            source_lang = "ru" if any("\u0400" <= c <= "\u04FF" for c in text[:100]) else "en"
-        
-        # Загрузка модели в зависимости от направления
-        self._load_model(source_lang, target_lang)
-        
-        # Разделение на чанки для длинных текстов
-        chunks = self._split_into_chunks(text)
-        translated_chunks = []
-        
-        for i, chunk in enumerate(chunks):
-            print(f"Перевод части {i+1}/{len(chunks)}")
-            try:
-                tokenized_text = self.tokenizer.prepare_seq2seq_batch([chunk], return_tensors='pt').to(self.device)
-                translated = self.model.generate(**tokenized_text)
-                result = self.tokenizer.decode(translated[0], skip_special_tokens=True)
-                translated_chunks.append(result)
-            except Exception as e:
-                print(f"Ошибка при переводе части {i+1}: {e}")
-        
-        return " ".join(translated_chunks)
 
-    def _split_into_chunks(self, text: str, max_length: int = 512) -> list:
-        """Разбивает текст на чанки с учётом слов"""
-        words = text.split()
-        chunks = []
-        current_chunk = []
+    def _load_model(self, model_name: str):
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
         
-        for word in words:
-            current_chunk.append(word)
-            if len(" ".join(current_chunk)) > max_length:
-                chunks.append(" ".join(current_chunk[:-1]))
-                current_chunk = [word]
-        
-        if current_chunk:
-            chunks.append(" ".join(current_chunk))
-        
-        return chunks
+        model = AutoModelForSeq2SeqLM.from_pretrained(
+            model_name,
+            device_map="auto" if self.device == "cuda" else None,
+            attn_implementation="sdpa"
+        )
+        return model, tokenizer
 
-    def translate_file_in_parts(self, file_path: str, source_lang: str = "auto", target_lang: str = "en"):
-        with open(file_path, 'r', encoding='utf-8') as file:
-            input_text = file.read()
-        
-        print(f"Исходный текст: {len(input_text)} символов")
-        
-        print(f"После очистки: {len(input_text)} символов")
-        
-        translated_text = self.translate(input_text, source_lang, target_lang)
-        print(f"После перевода: {len(translated_text)} символов")
-        
-        with open(file_path, 'w', encoding='utf-8') as file:
-            file.write(translated_text)
-        
-        print("Перевод завершён.")
+    def _preprocess_text(self, text: str) -> str:
+        """Очистка и подготовка технического текста"""
+        return " ".join(text.strip().split())
 
-if __name__=='__main__':
+    def _detect_language(self, text: str) -> str:
+        """Простое определение языка по символам"""
+        russian_chars = sum(1 for char in text if 'а' <= char <= 'я' or 'А' <= char <= 'Я')
+        english_chars = sum(1 for char in text if 'a' <= char <= 'z' or 'A' <= char <= 'Z')
+        return "ru" if russian_chars > english_chars else "en"
+
+    def translate(
+        self, 
+        texts: str,  # Принимаем как строку, так и список строк
+        source_lang: Optional[str] = None,
+        target_lang: Optional[str] = None,
+        batch_size: int = 4
+    ) -> str:  # Возвращаем соответственно строку или список
+        try:
+            # Получение кодов языков
+            src_code = self.language_codes.get(source_lang.lower(), source_lang)
+            tgt_code = self.language_codes.get(target_lang.lower(), target_lang)
+            
+            input_texts = [texts]
+
+            logger.info(f'Orig_text_____________{input_texts}')
+            
+            # Предварительная обработка текстов
+            processed_texts = [self._preprocess_text(text) for text in input_texts]
+            
+            translations = []
+            tokens = self.tokenizer.encode(texts, add_special_tokens=False)
+            # Пакетная обработка для экономии памяти
+            for i in range(0, len(processed_texts), batch_size):
+                batch = processed_texts[i:i+batch_size]
+                
+                # Токенизация с указанием исходного языка
+                inputs = self.tokenizer(
+                    batch,
+                    return_tensors="pt",
+                    padding=True,
+                    truncation=False,
+                    max_length=1024
+                ).to(self.device)
+                
+                # Получение ID целевого языка
+                lang_id = self.tokenizer.convert_tokens_to_ids(tgt_code)
+                
+                # Генерация переводов
+                generated_tokens = self.model.generate(
+                    **inputs,
+                    forced_bos_token_id=lang_id,
+                    max_length=2048,  # ← Увеличьте лимит
+                    min_length=int(len(tokens)-0.1*len(tokens)),
+                    num_beams=4,
+                    # repetition_penalty=1.2,
+                    # no_repeat_ngram_size=3,
+                    early_stopping=False,  # ← Не останавливайте генерацию преждевременно
+                    pad_token_id=self.tokenizer.pad_token_id,
+                    eos_token_id=self.tokenizer.eos_token_id
+                )
+                
+                # Декодирование результатов
+                batch_translations = self.tokenizer.batch_decode(
+                    generated_tokens, 
+                    skip_special_tokens=True
+                )
+                
+                translations.extend(batch_translations)
+            
+            # Возвращаем результат в соответствии с входным типом
+            return translations[0]
+        
+        except Exception as e:
+            logger.error(f"Translation error: {str(e)}")
+            return "" if isinstance(texts, str) else [""] * len(texts)
+
+# Примеры использования
+if __name__ == "__main__":
     translator = TranslationClient()
-    result = translator.translate("Привет, как дела?", source_lang="ru", target_lang="en")
-    print(result)
+    
+    # Пример 3: Перевод en->ru
+    text = 'Quantum computing harnesses quantum mechanics to unlock unprecedented computational abilities beyond the reach of classical computers. Quantum computers utilize qubits, which exist in a superposition of states, allowing them to represent a vast array of possibilities simultaneously. This quantum superposition empowers quantum computers to tackle complex problems with exponential speed, opening new avenues for scientific exploration and technological advancement. While still nascent, quantum computing holds the potential to revolutionize various fields, including drug discovery, machine learning, and supply chain optimization. However, the practical implementation of quantum computers faces challenges such as decoherence and the need for specialized hardware. Nonetheless, researchers are making strides towards overcoming these obstacles, paving the way for future quantum breakthroughs.'
 
-    print(translator.translate("Hello, how are you?", source_lang="en", target_lang="ru"))
+    print("Явный перевод en->ru:")
+    print(translator.translate(text, source_lang="en", target_lang="ru"))
+    print("\n" + "="*80 + "\n")
+
+    # tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-1.3b")
+    # tokens = tokenizer.encode(text, add_special_tokens=False)
+    # print(f"Количество токенов: {len(tokens)}")
