@@ -1,3 +1,0 @@
-path_to_bart_model: "/home/debian/develop/denis/Neuro-research/BART/bart-finetuned/final_model"
-llm_model_name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
-

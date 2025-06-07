@@ -1,5 +1,3 @@
-# src/pipeline_executor.py
-
 import sys
 import os
 import time
@@ -8,13 +6,10 @@ from pathlib import Path
 from typing import Dict, Any
 import argparse
 
-
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from summarization_parser.cli.main import main as run_parser
 from models.base import SummarizationPipeline, load_config, load_text, save_text
-from summarization_parser.cli.main import main as parser_main
-from summarization_parser.core.parse import SummarizationParser
+from summarization_parser.core.parser import SummarizationParser
 
 
 logging.basicConfig(
@@ -33,6 +28,7 @@ def execute_pipeline(summarizer, generator, query: str, config_path: str, data_d
         data_dir: Директория для данных
         max_retries: Максимум попыток ожидания готовности файла
         delay: Задержка между попытками (в секундах)
+        links_num: Количество источников
     
     Returns:
         Dict[str, Any]: Результаты обработки
@@ -136,43 +132,3 @@ def execute_pipeline(summarizer, generator, query: str, config_path: str, data_d
         "original_report": results["original_report"],
         "structured_report": results["structured_report"],
     }
-
-if __name__ == "__main__":
-    QUERY = "Algorithms for beginers"
-    CONFIG_PATH = '/home/debian/develop/denis/Neuro-research/summarization_parser/config/settings.yaml'
-    MODEL_CONFIG_PATH = "/models/config/model_cfg.yaml"
-    DATA_DIR = "/home/debian/develop/denis/Neuro-research/summarization_parser/data"
-    
-    try:
-        logger.info("Запуск полного пайплайна: парсинг -> суммаризация -> отчет")
-        
-        # Добавляем путь к конфигу модели в config
-        # model_config = load_config(MODEL_CONFIG_PATH)
-        # parser_config = load_config(CONFIG_PATH)
-        # parser_config["model_config_path"] = MODEL_CONFIG_PATH
-        
-        # Сохраняем обновленный конфиг
-        # import yaml
-        # with open(CONFIG_PATH, 'w', encoding='utf-8') as f:
-        #     yaml.safe_dump(parser_config, f)
-        
-        # Запуск пайплайна
-        full_results = execute_pipeline(
-            query=QUERY,
-            config_path=CONFIG_PATH,
-            data_dir=DATA_DIR
-        )
-        logger.info("Запуск произошел")
-
-
-        logger.info(f"Исходная длина: {full_results['original_length']} слов")
-        logger.info(f"Найдено источников: {full_results['source_count']}")
-        logger.info(f"Длина отчета: {full_results['summary_length']} слов")
-        logger.info("Пайплайн завершен успешно")
-        
-    except Exception as e:
-        logger.error(f"Ошибка выполнения пайплайна: {e}")
-        print(f"Произошла ошибка: {e}")
-    except KeyboardInterrupt:
-        logger.info("Пайплайн прерван пользователем")
-        print("\nПроцесс прерван пользователем")

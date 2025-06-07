@@ -40,7 +40,7 @@ model = BartForConditionalGeneration.from_pretrained(
 
 tokenizer = AutoTokenizer.from_pretrained(
     MODEL_NAME,
-    use_fast=True,                   # Используем быстрый токенизатор
+    use_fast=True,                   # быстрый токенизатор
     model_max_length=MAX_INPUT_LENGTH
 )
 

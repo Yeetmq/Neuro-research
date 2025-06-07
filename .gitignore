@@ -17,3 +17,4 @@ final_model/
 data_no/
 article_parsing/models/final_model/
 torch-2.7.0+cu118-cp310-cp310-win_amd64.whl
+.env

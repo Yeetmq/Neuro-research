@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 class ReportGenerator:
     def __init__(self, model_name: str = "google/gemma-7b-it", use_4bit: bool = True):
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = "cuda:0" if torch.cuda.is_available() else "cpu"
         login(token=os.getenv("HF_TOKEN"))
         self.model, self.tokenizer = self._load_model(model_name, use_4bit)
         self._setup_tokenizer()
@@ -26,7 +26,7 @@ class ReportGenerator:
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
             quantization_config=quantization_config,
-            device_map="auto",
+            device_map={"": "cuda:0"},
             torch_dtype=torch.bfloat16 if not use_4bit else None,
             attn_implementation="sdpa"
         )
